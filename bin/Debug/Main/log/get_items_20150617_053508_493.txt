@@ -1,0 +1,4 @@
+http://www.funsens.com/api/product.php?barcode=6901236380307&userid=70
+=========================================
+{"result":1,"list":[{"id":"17212","barcode":"6901236380307","seller_id":"70","name":"\u7ef4\u8fbe\u5a01\u724c\u9762\u5dfe\u7eb8(\u76d2\u88c5) 130\u62bd\/\u76d2 2\u5c42","stock":"49","store_stock":"0","price":"0.45","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/05\/18\/1431920677.jpg","tax_rate":"0","is_shelves":"1","company":"\u5357\u6c991\u53f7"}]}
+=========================================

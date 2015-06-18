@@ -1,0 +1,23 @@
+data = [
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "16162",
+        "amount": 1
+      }
+    ]
+  }
+]
+
+=========================================
+{"result":"3","order_id":["19920150615140316588"]}
+=========================================

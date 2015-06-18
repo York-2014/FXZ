@@ -1,0 +1,10 @@
+data = [
+  {
+    "product_id": "10225",
+    "quantity": 2
+  }
+]
+
+=========================================
+{"cart":[{"sumtax":0,"sumprice":2200,"voucher":[],"mail":0,"ems":0,"express":15,"prolist":[{"id":"449510","buyer_id":"38964","product_id":"10225","seller_id":"70","price":"1100.00","quantity":"2","create_time":"1434360157","spec_id":"0","is_tg":"false","discounts":"0.0","sumprice":"2200.00","num":"2","weight":"0.00","cubage":"1.00","tax_rate":"0","type":"1","subhead":"","brand":"","is_shelves":"1","status":"1","market_price":"0.00","store_stock":"0","pname":"\u5b8c\u7a0e - 1100\u5143","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/04\/29\/1430289132.jpg","catid":"10000107","pid":"10225","freight":"138","freight_type":"1","goods_sn":"B03001141","setmealname":null,"spec_name":null,"stock":"99975"}],"is_invoice":null,"company":"\u5357\u6c991\u53f7","shop_no":"154","invalid_count":null,"seller_id":"70"}],"sumprice":2200,"sumtax":0,"historytax":"0.10","historyPayedTax":0}
+=========================================

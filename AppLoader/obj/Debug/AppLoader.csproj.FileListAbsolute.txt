@@ -1,0 +1,15 @@
+E:\6.12\AppLoader\bin\Debug\AppLoader.exe.config
+E:\6.12\AppLoader\bin\Debug\AppLoader.exe
+E:\6.12\AppLoader\bin\Debug\AppLoader.pdb
+E:\6.12\AppLoader.exe.config
+E:\bin\Debug\AppLoader.exe.config
+E:\6.12\bin\Debug\Settings.xml
+E:\6.12\bin\Debug\AppLoader.exe.config
+E:\6.12\bin\Debug\AppLoader.exe
+E:\6.12\bin\Debug\AppLoader.pdb
+E:\6.12\AppLoader\obj\Debug\AppLoader.LoaderForm.resources
+E:\6.12\AppLoader\obj\Debug\AppLoader.Properties.Resources.resources
+E:\6.12\AppLoader\obj\Debug\AppLoader.csproj.GenerateResource.Cache
+E:\6.12\AppLoader\obj\Debug\AppLoader.exe
+E:\6.12\AppLoader\obj\Debug\AppLoader.pdb
+E:\6.12\AppLoader\obj\Debug\AppLoader.csprojResolveAssemblyReference.cache

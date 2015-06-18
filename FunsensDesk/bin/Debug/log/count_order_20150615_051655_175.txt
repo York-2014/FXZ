@@ -1,0 +1,14 @@
+data = [
+  {
+    "product_id": "9977",
+    "quantity": 1
+  },
+  {
+    "product_id": "10225",
+    "quantity": 1
+  }
+]
+
+=========================================
+{"cart":[{"id":"449458","seller_id":"70","shop_no":"154","spec_id":"0","company":"\u5357\u6c991\u53f7","discounts":"0.0","sumtax":35.6,"sumprice":356,"voucher":[],"mail":0,"ems":0,"express":0,"prolist":[{"id":"449458","buyer_id":"38964","product_id":"9977","seller_id":"70","price":"356.00","quantity":"1","create_time":"1434359815","spec_id":"0","is_tg":"false","discounts":"0.0","sumprice":"356.00","num":"1","weight":"0.00","cubage":"0.00","tax_rate":"10","type":"0","subhead":"","brand":"","is_shelves":"1","status":"1","market_price":"0.00","store_stock":"0","pname":"356\u5143\u672a\u5b8c\u7a0e10%\u5546\u54c1\u514d\u8fd0\u8d39","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/04\/29\/1430277405.jpg","catid":"10110402","pid":"9977","freight":"75","freight_type":"0","goods_sn":"B03001141","setmealname":null,"spec_name":null,"stock":"516"}],"is_invoice":null,"goods_sn":null},{"sumtax":0,"sumprice":1100,"voucher":[],"mail":0,"ems":0,"express":10,"prolist":[{"id":"449459","buyer_id":"38964","product_id":"10225","seller_id":"70","price":"1100.00","quantity":"1","create_time":"1434359815","spec_id":"0","is_tg":"false","discounts":"0.0","sumprice":"1100.00","num":"1","weight":"0.00","cubage":"1.00","tax_rate":"0","type":"1","subhead":"","brand":"","is_shelves":"1","status":"1","market_price":"0.00","store_stock":"0","pname":"\u5b8c\u7a0e - 1100\u5143","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/04\/29\/1430289132.jpg","catid":"10000107","pid":"10225","freight":"138","freight_type":"1","goods_sn":"B03001141","setmealname":null,"spec_name":null,"stock":"99976"}],"is_invoice":null,"company":"\u5357\u6c991\u53f7","shop_no":"154","invalid_count":null,"seller_id":"70"}],"sumprice":1456,"sumtax":0,"historytax":"0.10","historyPayedTax":0}
+=========================================

@@ -1,0 +1,7 @@
+order_ids = 15420150617110934802
+number = 999999
+page = 1
+
+=========================================
+{"count":1,"pageIndex":"1","pageTotal":1,"orderList":[{"createTime":"2015-06-17 11:09:34","orderStatus":"1","reimburseStatus":0,"connectName":"\u8096\u6cfd\u6853","buyerComment":"0","sellerComment":"0","orderId":"15420150617110934802","shopId":"38964","consignee_address":"\u5e7f\u4e1c\u7701 \u5e7f\u5dde\u5e02 \u5357\u6c99\u533atest","consignee_mobile":"15813181223","shopName":null,"tax_price":"0.00","postType":"","postPrice":"0","priceTotal":1.8,"productList":[{"productId":"17212","picUrl":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/05\/18\/1431920677.jpg_120X120.jpg","productName":"\u7ef4\u8fbe\u5a01\u724c\u9762\u5dfe\u7eb8(\u76d2\u88c5) 130\u62bd\/\u76d2 2\u5c42","tax_rate":"0","barcode":"6901236380307","price":"0.45","productVolume":"4"}]}],"result":0,"historytax":0,"historyPayedTax":0}
+=========================================

@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A92E173-1C69-43AB-BB09-80F273957F50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>funsens</RootNamespace>
+    <AssemblyName>funsens</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\Main\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\Main\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>funsens.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>funsens_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib">
+      <HintPath>lib\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="funsens\api\AddOrderHandler.cs" />
+    <Compile Include="funsens\api\Old\BindShelfOrderHandler.cs" />
+    <Compile Include="funsens\api\CountOrderDetailsHandler.cs" />
+    <Compile Include="funsens\api\GetAddressesHandler.cs" />
+    <Compile Include="funsens\api\GetDistrictsHandler.cs" />
+    <Compile Include="funsens\api\GetItemsHandler.cs" />
+    <Compile Include="funsens\api\GetOrderHandler.cs" />
+    <Compile Include="funsens\api\GetOrdersHandler.cs" />
+    <Compile Include="funsens\api\GetOrdersOfFranchiseeHandler.cs" />
+    <Compile Include="funsens\api\Old\GetPackagedOrdersHandler.cs" />
+    <Compile Include="funsens\api\Old\GetServiceDesksHandler.cs" />
+    <Compile Include="funsens\api\Old\GetShelfsHandler.cs" />
+    <Compile Include="funsens\api\Old\ModifyOrderStatusHandler.cs" />
+    <Compile Include="funsens\api\Old\ResetShelfHandler.cs" />
+    <Compile Include="funsens\api\SignOutHandler.cs" />
+    <Compile Include="funsens\api\UserInfoHandler.cs" />
+    <Compile Include="funsens\common\CommonData.cs" />
+    <Compile Include="funsens\common\Session.cs" />
+    <Compile Include="funsens\common\vo\DistrictVO.cs" />
+    <Compile Include="funsens\api\API.cs" />
+    <Compile Include="funsens\api\Handler.cs" />
+    <Compile Include="funsens\api\SignInHandler.cs" />
+    <Compile Include="funsens\customer\vo\AddressVO.cs" />
+    <Compile Include="funsens\customer\vo\CustomerVO.cs" />
+    <Compile Include="funsens\franchisee\vo\FranchiseeVO.cs" />
+    <Compile Include="funsens\image\ImagePool.cs" />
+    <Compile Include="funsens\instock\InStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\instock\InStockForm.Designer.cs">
+      <DependentUpon>InStockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\item\ItemPool_.cs" />
+    <Compile Include="funsens\item\vo\ItemVO.cs" />
+    <Compile Include="funsens\log\Log.cs" />
+    <Compile Include="funsens\mis\Mis.cs" />
+    <Compile Include="funsens\mis\MisResult.cs" />
+    <Compile Include="funsens\mis\MisUSB.cs" />
+    <Compile Include="funsens\order\vo\OrderDetailsVO.cs" />
+    <Compile Include="funsens\order\vo\OrderVO.cs" />
+    <Compile Include="funsens\servicedesk\vo\ServiceDeskVO.cs" />
+    <Compile Include="funsens\stock\vo\ShelfVO.cs" />
+    <Compile Include="funsens\ui\AddOrderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\AddOrderPanel.Designer.cs">
+      <DependentUpon>AddOrderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\AddOrderPayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\AddOrderPayPanel.Designer.cs">
+      <DependentUpon>AddOrderPayPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\AddressSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\AddressSelector.Designer.cs">
+      <DependentUpon>AddressSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\FranchiseeSignInPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\FranchiseeSignInPanel.Designer.cs">
+      <DependentUpon>FranchiseeSignInPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\HandlePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\HandlePanel.Designer.cs">
+      <DependentUpon>HandlePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\Old\PickUpInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\Old\PickUpInfo.Designer.cs">
+      <DependentUpon>PickUpInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\Old\PickUpInfoOrderDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\Old\PickUpInfoOrderDGV.Designer.cs">
+      <DependentUpon>PickUpInfoOrderDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\ItemSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\ItemSelector.Designer.cs">
+      <DependentUpon>ItemSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\MenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\MenuItem.Designer.cs">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\AddOrderConfirmPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\AddOrderConfirmPanel.Designer.cs">
+      <DependentUpon>AddOrderConfirmPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\OrderConfirmItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\OrderConfirmItem.Designer.cs">
+      <DependentUpon>OrderConfirmItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\OrderInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\OrderInfoForm.Designer.cs">
+      <DependentUpon>OrderInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\Old\OrderReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\Old\OrderReceiptForm.Designer.cs">
+      <DependentUpon>OrderReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\OrderReceiptForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\OrderReceiptForm1.Designer.cs">
+      <DependentUpon>OrderReceiptForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\MyOrderDetailsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\MyOrderDetailsPanel.Designer.cs">
+      <DependentUpon>MyOrderDetailsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\MyOrderListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\MyOrderListPanel.Designer.cs">
+      <DependentUpon>MyOrderListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\cvr\CVR.cs" />
+    <Compile Include="funsens\cvr\CVRHandler.cs" />
+    <Compile Include="funsens\ui\Old\SorterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\Old\SorterForm.Designer.cs">
+      <DependentUpon>SorterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\PosPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\PosPanel.Designer.cs">
+      <DependentUpon>PosPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\SignInPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\SignInPanel.Designer.cs">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\SignUpPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\SignUpPanel.Designer.cs">
+      <DependentUpon>SignUpPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\ui\TitlePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="funsens\ui\TitlePanel.Designer.cs">
+      <DependentUpon>TitlePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funsens\util\BarcodeUtil.cs" />
+    <Compile Include="funsens\util\Base64Util.cs" />
+    <Compile Include="funsens\util\RegisterUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="funsens\api\SignUpHandler.cs" />
+    <Compile Include="x\json\JA.cs" />
+    <Compile Include="x\json\JO.cs" />
+    <Compile Include="x\net\http\HTTP.cs" />
+    <Compile Include="x\net\http\HTTPResult.cs" />
+    <Compile Include="x\util\S.cs" />
+    <EmbeddedResource Include="funsens\instock\InStockForm.resx">
+      <DependentUpon>InStockForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\AddOrderPanel.resx">
+      <DependentUpon>AddOrderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\AddOrderPayPanel.resx">
+      <DependentUpon>AddOrderPayPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\AddressSelector.resx">
+      <DependentUpon>AddressSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\FranchiseeSignInPanel.resx">
+      <DependentUpon>FranchiseeSignInPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\HandlePanel.resx">
+      <DependentUpon>HandlePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\Old\PickUpInfo.resx">
+      <DependentUpon>PickUpInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\Old\PickUpInfoOrderDGV.resx">
+      <DependentUpon>PickUpInfoOrderDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\ItemSelector.resx">
+      <DependentUpon>ItemSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\MenuItem.resx">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\AddOrderConfirmPanel.resx">
+      <DependentUpon>AddOrderConfirmPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\OrderConfirmItem.resx">
+      <DependentUpon>OrderConfirmItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\OrderInfoForm.resx">
+      <DependentUpon>OrderInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\Old\OrderReceiptForm.resx">
+      <DependentUpon>OrderReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\OrderReceiptForm1.resx">
+      <DependentUpon>OrderReceiptForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\MyOrderDetailsPanel.resx">
+      <DependentUpon>MyOrderDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\MyOrderListPanel.resx">
+      <DependentUpon>MyOrderListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\Old\SorterForm.resx">
+      <DependentUpon>SorterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\PosPanel.resx">
+      <DependentUpon>PosPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\SignInPanel.resx">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\SignUpPanel.resx">
+      <DependentUpon>SignUpPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funsens\ui\TitlePanel.resx">
+      <DependentUpon>TitlePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\goods.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="funsens_logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

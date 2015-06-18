@@ -1,0 +1,40 @@
+data = [
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7477",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7477",
+        "amount": 1
+      }
+    ]
+  }
+]
+
+=========================================
+{"result":"3","order_id":["15420150615151515629","15420150615151515691"]}
+=========================================

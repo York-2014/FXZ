@@ -1,0 +1,10 @@
+data = [
+  {
+    "product_id": "17212",
+    "quantity": 1
+  }
+]
+
+=========================================
+{"cart":[{"sumtax":0,"sumprice":0.45,"voucher":[],"mail":0,"ems":0,"express":6,"prolist":[{"id":"458894","buyer_id":"38964","product_id":"17212","seller_id":"70","price":"0.45","quantity":"1","create_time":"1434533710","spec_id":"0","is_tg":"false","discounts":"0.0","sumprice":"0.45","num":"1","weight":"0.00","cubage":"0.00","tax_rate":"0","type":"1","subhead":"","brand":"Vinda","is_shelves":"1","status":"1","market_price":"0.00","store_stock":"0","pname":"\u7ef4\u8fbe\u5a01\u724c\u9762\u5dfe\u7eb8(\u76d2\u88c5) 130\u62bd\/\u76d2 2\u5c42","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/70\/2015\/05\/18\/1431920677.jpg","catid":"10031205","pid":"17212","freight":"144","freight_type":"1","goods_sn":"","setmealname":null,"spec_name":null,"stock":"49"}],"is_invoice":null,"company":"\u5357\u6c991\u53f7","shop_no":"154","invalid_count":null,"seller_id":"70"}],"sumprice":0.45,"sumtax":0,"historytax":0,"historyPayedTax":0}
+=========================================

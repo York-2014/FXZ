@@ -1,0 +1,10 @@
+data = [
+  {
+    "product_id": "16162",
+    "quantity": 1
+  }
+]
+
+=========================================
+{"cart":[{"id":"447883","seller_id":"40508","shop_no":"199","spec_id":"0","company":"\u9879\u76ee\u7ecf\u7406\u7684\u6d4b\u8bd5\u5e97\u8f85","discounts":"0.0","sumtax":0.1,"sumprice":1,"voucher":[],"mail":0,"ems":0,"express":0,"prolist":[{"id":"447883","buyer_id":"38964","product_id":"16162","seller_id":"40508","price":"1.00","quantity":"1","create_time":"1434348154","spec_id":"0","is_tg":"false","discounts":"0.0","sumprice":"1.00","num":"1","weight":"3.00","cubage":"5.00","tax_rate":"10","type":"0","subhead":"\u624b\u673aIphone","brand":"","is_shelves":"1","status":"1","market_price":"3400.00","store_stock":"0","pname":" \u624b\u673a","pic":"http:\/\/www.funsens.com\/uploadfile\/product\/40508\/2015\/05\/13\/1431508694.jpg","catid":"10120107","pid":"16162","freight":"164","freight_type":"1","goods_sn":"003234","setmealname":null,"spec_name":null,"stock":"30"}],"is_invoice":null,"goods_sn":null}],"sumprice":1,"sumtax":0,"historytax":0,"historyPayedTax":0}
+=========================================

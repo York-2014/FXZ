@@ -1,0 +1,11 @@
+E:\VSWorkspace\TaoDesk\TaoDesk\bin\Debug\TaoDesk.exe.config
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\TaoDesk.csprojResolveAssemblyReference.cache
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\TaoDesk.Properties.Resources.resources
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\TaoDesk.csproj.GenerateResource.Cache
+E:\VSWorkspace\TaoDesk\TaoDesk\bin\Debug\TaoDesk.exe
+E:\VSWorkspace\TaoDesk\TaoDesk\bin\Debug\TaoDesk.pdb
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\TaoDesk.exe
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\TaoDesk.pdb
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\funsens.ui.SignIn.resources
+E:\VSWorkspace\TaoDesk\TaoDesk\obj\Debug\funsens.ui.SignUp.resources
+E:\VSWorkspace\TaoDesk\TaoDesk\bin\Debug\Newtonsoft.Json.dll

@@ -1,0 +1,210 @@
+data = [
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "9977",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "isCarry": 1,
+    "logistics_type": "ems",
+    "name": "肖泽桓",
+    "tel": "15813181223",
+    "provinceId": "",
+    "cityId": "",
+    "districtId": "",
+    "address": "test",
+    "zipCode": "",
+    "detailsList": [
+      {
+        "id": "7480",
+        "amount": 1
+      }
+    ]
+  }
+]
+
+=========================================
+{"result":"3","order_id":["15420150615175553432","15420150615175553597","15420150615175554521","15420150615175554282","15420150615175554794","15420150615175554276","15420150615175554887","15420150615175554248","15420150615175554815","15420150615175554238","15420150615175554545","15420150615175555942"]}
+=========================================
