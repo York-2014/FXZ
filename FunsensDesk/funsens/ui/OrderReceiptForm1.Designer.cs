@@ -51,20 +51,20 @@
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox2.Location = new System.Drawing.Point(12, 445);
+            this.richTextBox2.Location = new System.Drawing.Point(12, 417);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(293, 178);
+            this.richTextBox2.Size = new System.Drawing.Size(293, 160);
             this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "          就要淘尽世界\n         www.funsens.com\n\n      谢谢惠顾，请保留小票\n         欢迎下次光临\n交易时间：" +
-    "CREATED\n\n.";
+            this.richTextBox2.Text = "          就要淘尽世界\n         www.funsens.com\n\n谢谢惠顾，请保留小票  欢迎下次光临\n交易时间：CREATED\n打印时间：P" +
+    "RINTED\n\n.";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 305);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 143);
+            this.pictureBox1.Size = new System.Drawing.Size(293, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;

@@ -166,12 +166,12 @@ namespace funsens.ui
 
         private void pickUpBClick()
         {
-            if (!Session.getInstance().isCustomerSign())
-            {
-                MessageBox.Show("请先登录");
-                this.signInBClick();
-                return;
-            }
+            //if (!Session.getInstance().isCustomerSign())
+            //{
+            //    MessageBox.Show("请先登录");
+            //    this.signInBClick();
+            //    return;
+            //}
 
             this.pickUpOrderListP.Visible = true;
             this.pickUpOrderDetailsP.Visible = false;
@@ -203,9 +203,9 @@ namespace funsens.ui
                 this.signInBClick();
                 return;
             }
-
+            
             this.menuP.setItemClick(1);
-
+            
             this.pickUpOrderListP.Visible = false;
             this.pickUpOrderDetailsP.Visible = false;
             this.addOrderP.Visible = true;
@@ -350,6 +350,7 @@ namespace funsens.ui
                     this.pickUpBClick();
                     break;
                 case 1:
+                    //this.signOut();
                     this.addOrderBClick();
                     break;
                 case 2:
@@ -489,9 +490,9 @@ namespace funsens.ui
             this.userInfoP.Location = new Point(MainMenu.MENU_WIDTH, 0);
             this.userInfoP.Size = new Size(panelW, userPH);
 
-            int signOutBY = (userPH - this.signOutB.Height) / 2;
-            int x = panelW - this.signOutB.Height - this.signOutB.Width;
-            this.signOutB.Location = new Point(x, signOutBY);
+            //int signOutBY = (userPH - this.signOutB.Height) / 2;
+            //int x = panelW - this.signOutB.Height - this.signOutB.Width;
+            //this.signOutB.Location = new Point(x-5, signOutBY);
 
             //Panel
             this.signUpP.Location = new Point(MainMenu.MENU_WIDTH, userPH);

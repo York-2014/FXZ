@@ -17,7 +17,7 @@ namespace funsens.ui
     /// </summary>
     public partial class OrderReceiptForm1 : Form
     {
-        private int top = 70;
+        private int top = 30;
         private int h1;
 
         public OrderReceiptForm1()
@@ -42,7 +42,7 @@ namespace funsens.ui
                 OrderDetailsVO detailsVO = detailsList[i];
 
                 //itemContent += detailsVO.Amount + this.formatName(detailsVO.ItemName) + "￥" + detailsVO.Total + "\r\n";
-                itemContent += this.formatName(detailsVO.ItemName).Trim() + "\r\n" + string.Format("{0:##########}", detailsVO.Barcode).PadRight(16) + string.Format("{0:##########}", detailsVO.Amount).PadRight(10) + "￥" + detailsVO.Total + "\r\n";
+                itemContent += this.formatName(detailsVO.ItemName).Trim() + "\r\n " + string.Format("{0:##########}", detailsVO.Barcode).PadRight(15) + string.Format("{0:##########}", detailsVO.Amount).PadRight(9) + "￥" + detailsVO.Total + "\r\n";
 
                 T += detailsVO.Amount;
                 /*int l = detailsVO.ItemName.Length;
@@ -67,7 +67,7 @@ namespace funsens.ui
                 if (tmp > 50)
                     tax = orderVO.TaxTotal;
             }
-            content1 = content1.Replace("ITEM_COUNT", "" + T + "".PadRight(9));
+            content1 = content1.Replace("ITEM_COUNT", "" + T + "".PadRight(7));
             content1 = content1.Replace("ITEM_AMOUNT", "￥" + orderVO.Payment);
             content1 = content1.Replace("UN_PAY_TAX", "" + orderVO.UnPayTax);
             content1 = content1.Replace("TAX", "" + tax);
@@ -85,6 +85,8 @@ namespace funsens.ui
 
             string content2 = this.richTextBox2.Text;
             content2 = content2.Replace("CREATED", orderVO.Created.ToString("yyyy.MM.dd HH:mm:ss"));
+            content2 = content2.Replace("PRINTED", DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss"));
+            
             this.richTextBox2.Text = content2;
         }
 
@@ -104,7 +106,7 @@ namespace funsens.ui
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString(this.richTextBox1.Text, this.richTextBox1.Font, Brushes.Black, new Point(20, this.top));
-            e.Graphics.DrawImage(this.pictureBox1.Image, new Point(70, this.h1 + this.top - 20));
+            e.Graphics.DrawImage(this.pictureBox1.Image, new Point(70, this.h1 + this.top - 30));
             e.Graphics.DrawString(this.richTextBox2.Text, this.richTextBox2.Font, Brushes.Black, new Point(20, this.top + this.h1 + this.pictureBox1.ClientRectangle.Height));
         }
 
@@ -123,7 +125,7 @@ namespace funsens.ui
             if (S.blank(name))
                 return name;
 
-            int rowSize = 24;
+            int rowSize = 34;
 
             int count = name.Length;
             List<string> resultList = new List<string>();

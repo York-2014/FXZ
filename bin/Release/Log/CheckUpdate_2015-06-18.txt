@@ -1,0 +1,7 @@
+【10:59:06】
+  无法连接到远程服务器
+Details:   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadString(Uri address)
+   在 System.Net.WebClient.DownloadString(String address)
+   在 AppLoader.LoaderForm.Init() 位置 e:\6.12\AppLoader\LoaderForm.cs:行号 136
+

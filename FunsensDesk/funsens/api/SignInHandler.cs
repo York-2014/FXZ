@@ -21,7 +21,7 @@ namespace funsens.api
             if(null == idNo)
             {
                 this.parameterMap.Add("mobile", tel);
-                this.parameterMap.Add("password", password);
+               this.parameterMap.Add("password", password);
             }
             else
             {

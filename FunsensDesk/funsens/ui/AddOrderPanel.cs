@@ -561,13 +561,16 @@ namespace funsens.ui
         }
         public bool bolnum(string temp)
         {
-            for (int i = 0; i < temp.Length; i++)
-            {
-                byte tempbyte = Convert.ToByte(temp[i]);
-                if ((tempbyte < 48) || (tempbyte > 57))
-                    return false;
-            }
-            return true;
+            int num = 0;
+            return int.TryParse(temp, out num);
+
+            //for (int i = 0; i < temp.Length; i++)
+            //{
+            //    byte tempbyte = Convert.ToByte(temp[i]);
+            //    if ((tempbyte < 48) || (tempbyte > 57))
+            //        return false;
+            //}
+            //return true;
 
         }
     }

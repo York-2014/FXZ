@@ -38,6 +38,7 @@ namespace funsens.common
             set { customerTel = value; }
         }
 
+
         private string customerAddress;
         public string CustomerAddress
         {
@@ -85,6 +86,7 @@ namespace funsens.common
             this.customerName = null;
             this.customerTel = null;
             this.customerAddress = null;
+            
         }
 
         public bool isCustomerSign()

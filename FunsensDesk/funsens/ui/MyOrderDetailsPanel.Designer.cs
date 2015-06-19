@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.saveB = new System.Windows.Forms.Button();
             this.itemDGV = new System.Windows.Forms.DataGridView();
+            this.hp = new funsens.ui.HandlePanel();
+            this.titleP = new funsens.ui.TitlePanel();
             this._barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.franchiseeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +49,6 @@
             this.tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hp = new funsens.ui.HandlePanel();
-            this.titleP = new funsens.ui.TitlePanel();
             this.footerP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +187,22 @@
             this.itemDGV.TabIndex = 1;
             this.itemDGV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemDGV_KeyDown);
             // 
+            // hp
+            // 
+            this.hp.BackColor = System.Drawing.SystemColors.Control;
+            this.hp.Location = new System.Drawing.Point(17, 414);
+            this.hp.Name = "hp";
+            this.hp.Size = new System.Drawing.Size(174, 77);
+            this.hp.TabIndex = 2;
+            // 
+            // titleP
+            // 
+            this.titleP.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.titleP.Location = new System.Drawing.Point(17, 17);
+            this.titleP.Name = "titleP";
+            this.titleP.Size = new System.Drawing.Size(692, 50);
+            this.titleP.TabIndex = 3;
+            // 
             // _barcode
             // 
             this._barcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -239,23 +255,7 @@
             this.total.HeaderText = "小计（未税）";
             this.total.Name = "total";
             this.total.ReadOnly = true;
-            this.total.Width = 120;
-            // 
-            // hp
-            // 
-            this.hp.BackColor = System.Drawing.SystemColors.Control;
-            this.hp.Location = new System.Drawing.Point(17, 414);
-            this.hp.Name = "hp";
-            this.hp.Size = new System.Drawing.Size(174, 77);
-            this.hp.TabIndex = 2;
-            // 
-            // titleP
-            // 
-            this.titleP.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.titleP.Location = new System.Drawing.Point(17, 17);
-            this.titleP.Name = "titleP";
-            this.titleP.Size = new System.Drawing.Size(692, 50);
-            this.titleP.TabIndex = 3;
+            this.total.Width = 130;
             // 
             // MyOrderDetailsPanel
             // 

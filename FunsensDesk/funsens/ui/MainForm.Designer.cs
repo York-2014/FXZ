@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.menuP = new funsens.ui.MainMenu();
             this.userInfoP = new System.Windows.Forms.Panel();
             this.idCardReaderStatusL = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,28 +39,21 @@
             this.idNoL = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.hp = new funsens.ui.HandlePanel();
+            this.addOrderPayP = new funsens.ui.AddOrderPayPanel();
+            this.addOrderConfirmP = new funsens.ui.AddOrderConfirmPanel();
             this.itemS = new funsens.ui.ItemSelector();
+            this.hp = new funsens.ui.HandlePanel();
             this.pickUpOrderListP = new funsens.ui.MyOrderListPanel();
             this.pickUpOrderDetailsP = new funsens.ui.MyOrderDetailsPanel();
             this.addOrderP = new funsens.ui.AddOrderPanel();
             this.signInP = new funsens.ui.SignInPanel();
             this.signUpP = new funsens.ui.SignUpPanel();
             this.franchiseeSignInP = new funsens.ui.FranchiseeSignInPanel();
-            this.addOrderConfirmP = new funsens.ui.AddOrderConfirmPanel();
+            this.menuP = new funsens.ui.MainMenu();
             this.addressSelectorP = new funsens.ui.AddressSelector();
-            this.addOrderPayP = new funsens.ui.AddOrderPayPanel();
             this.posP = new funsens.ui.PosPanel();
             this.userInfoP.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuP
-            // 
-            this.menuP.BackColor = System.Drawing.SystemColors.Control;
-            this.menuP.Location = new System.Drawing.Point(0, 0);
-            this.menuP.Name = "menuP";
-            this.menuP.Size = new System.Drawing.Size(256, 641);
-            this.menuP.TabIndex = 0;
             // 
             // userInfoP
             // 
@@ -77,14 +69,14 @@
             this.userInfoP.Controls.Add(this.label1);
             this.userInfoP.Location = new System.Drawing.Point(207, 1);
             this.userInfoP.Name = "userInfoP";
-            this.userInfoP.Size = new System.Drawing.Size(1122, 50);
+            this.userInfoP.Size = new System.Drawing.Size(1122, 68);
             this.userInfoP.TabIndex = 5;
             // 
             // idCardReaderStatusL
             // 
             this.idCardReaderStatusL.AutoSize = true;
             this.idCardReaderStatusL.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.idCardReaderStatusL.Location = new System.Drawing.Point(97, 19);
+            this.idCardReaderStatusL.Location = new System.Drawing.Point(97, 30);
             this.idCardReaderStatusL.Name = "idCardReaderStatusL";
             this.idCardReaderStatusL.Size = new System.Drawing.Size(35, 13);
             this.idCardReaderStatusL.TabIndex = 8;
@@ -93,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 19);
+            this.label3.Location = new System.Drawing.Point(21, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 7;
@@ -101,9 +93,10 @@
             // 
             // signOutB
             // 
-            this.signOutB.Location = new System.Drawing.Point(1006, 8);
+            this.signOutB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.signOutB.Location = new System.Drawing.Point(931, 12);
             this.signOutB.Name = "signOutB";
-            this.signOutB.Size = new System.Drawing.Size(108, 33);
+            this.signOutB.Size = new System.Drawing.Size(129, 46);
             this.signOutB.TabIndex = 6;
             this.signOutB.Text = "退出当前用户";
             this.signOutB.UseVisualStyleBackColor = true;
@@ -112,7 +105,7 @@
             // telL
             // 
             this.telL.AutoSize = true;
-            this.telL.Location = new System.Drawing.Point(803, 19);
+            this.telL.Location = new System.Drawing.Point(803, 30);
             this.telL.Name = "telL";
             this.telL.Size = new System.Drawing.Size(11, 12);
             this.telL.TabIndex = 5;
@@ -121,7 +114,7 @@
             // usernameL
             // 
             this.usernameL.AutoSize = true;
-            this.usernameL.Location = new System.Drawing.Point(271, 19);
+            this.usernameL.Location = new System.Drawing.Point(271, 30);
             this.usernameL.Name = "usernameL";
             this.usernameL.Size = new System.Drawing.Size(11, 12);
             this.usernameL.TabIndex = 4;
@@ -130,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(435, 19);
+            this.label4.Location = new System.Drawing.Point(435, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 3;
@@ -139,7 +132,7 @@
             // idNoL
             // 
             this.idNoL.AutoSize = true;
-            this.idNoL.Location = new System.Drawing.Point(511, 19);
+            this.idNoL.Location = new System.Drawing.Point(511, 30);
             this.idNoL.Name = "idNoL";
             this.idNoL.Size = new System.Drawing.Size(11, 12);
             this.idNoL.TabIndex = 2;
@@ -148,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(739, 19);
+            this.label2.Location = new System.Drawing.Point(739, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 1;
@@ -157,11 +150,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 19);
+            this.label1.Location = new System.Drawing.Point(219, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
+            // 
+            // addOrderPayP
+            // 
+            this.addOrderPayP.Location = new System.Drawing.Point(12, 875);
+            this.addOrderPayP.Name = "addOrderPayP";
+            this.addOrderPayP.Size = new System.Drawing.Size(255, 175);
+            this.addOrderPayP.TabIndex = 9;
+            // 
+            // addOrderConfirmP
+            // 
+            this.addOrderConfirmP.Location = new System.Drawing.Point(1030, 701);
+            this.addOrderConfirmP.Name = "addOrderConfirmP";
+            this.addOrderConfirmP.Size = new System.Drawing.Size(357, 270);
+            this.addOrderConfirmP.TabIndex = 8;
+            // 
+            // itemS
+            // 
+            this.itemS.Location = new System.Drawing.Point(220, 630);
+            this.itemS.Name = "itemS";
+            this.itemS.Size = new System.Drawing.Size(791, 420);
+            this.itemS.TabIndex = 7;
             // 
             // hp
             // 
@@ -170,13 +184,6 @@
             this.hp.Name = "hp";
             this.hp.Size = new System.Drawing.Size(200, 100);
             this.hp.TabIndex = 6;
-            // 
-            // itemS
-            // 
-            this.itemS.Location = new System.Drawing.Point(220, 630);
-            this.itemS.Name = "itemS";
-            this.itemS.Size = new System.Drawing.Size(791, 420);
-            this.itemS.TabIndex = 7;
             // 
             // pickUpOrderListP
             // 
@@ -226,12 +233,13 @@
             this.franchiseeSignInP.Size = new System.Drawing.Size(513, 320);
             this.franchiseeSignInP.TabIndex = 2;
             // 
-            // addOrderConfirmP
+            // menuP
             // 
-            this.addOrderConfirmP.Location = new System.Drawing.Point(1030, 701);
-            this.addOrderConfirmP.Name = "addOrderConfirmP";
-            this.addOrderConfirmP.Size = new System.Drawing.Size(357, 270);
-            this.addOrderConfirmP.TabIndex = 8;
+            this.menuP.BackColor = System.Drawing.SystemColors.Control;
+            this.menuP.Location = new System.Drawing.Point(0, 0);
+            this.menuP.Name = "menuP";
+            this.menuP.Size = new System.Drawing.Size(256, 641);
+            this.menuP.TabIndex = 0;
             // 
             // addressSelectorP
             // 
@@ -239,13 +247,6 @@
             this.addressSelectorP.Name = "addressSelectorP";
             this.addressSelectorP.Size = new System.Drawing.Size(791, 420);
             this.addressSelectorP.TabIndex = 7;
-            // 
-            // addOrderPayP
-            // 
-            this.addOrderPayP.Location = new System.Drawing.Point(12, 875);
-            this.addOrderPayP.Name = "addOrderPayP";
-            this.addOrderPayP.Size = new System.Drawing.Size(255, 175);
-            this.addOrderPayP.TabIndex = 9;
             // 
             // posP
             // 
