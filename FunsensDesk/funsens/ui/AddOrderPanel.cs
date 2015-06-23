@@ -298,6 +298,8 @@ namespace funsens.ui
                     row.Cells[5].Value = vo.Amount;
 
                     row.Cells[7].Value = vo.Stock;
+
+                    row.Cells[8].Value = vo.StoreStock;
                 }
             }
             else
@@ -368,6 +370,10 @@ namespace funsens.ui
             DataGridViewTextBoxCell StockCell = new DataGridViewTextBoxCell();
             StockCell.Value = vo.Stock.ToString();
             row.Cells.Add(StockCell);
+
+            DataGridViewTextBoxCell StoreStockCell = new DataGridViewTextBoxCell();
+            StoreStockCell.Value = vo.StoreStock.ToString();
+            row.Cells.Add(StoreStockCell);
 
             this.itemDGV.Rows.Add(row);
 

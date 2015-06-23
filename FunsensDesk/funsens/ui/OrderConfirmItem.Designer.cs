@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.generalP = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.expressTypeCB = new System.Windows.Forms.ComboBox();
             this.selectAddressB = new System.Windows.Forms.Button();
@@ -51,12 +52,6 @@
             this.pickupRB = new System.Windows.Forms.RadioButton();
             this.expressRB = new System.Windows.Forms.RadioButton();
             this.itemDGV = new System.Windows.Forms.DataGridView();
-            this.franchiseeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.substract = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.footerP = new System.Windows.Forms.Panel();
             this.taxTotalL = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,7 +61,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.totalL = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.franchiseeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.减少 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generalP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.footerP.SuspendLayout();
@@ -98,6 +97,17 @@
             this.generalP.Name = "generalP";
             this.generalP.Size = new System.Drawing.Size(1093, 125);
             this.generalP.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(757, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 26);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "新增地址";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label11
             // 
@@ -300,30 +310,29 @@
             // 
             this.itemDGV.AllowUserToAddRows = false;
             this.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.franchiseeName,
             this.name,
             this.price,
-            this.substract,
-            this.amount,
-            this.add});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.itemDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.减少,
+            this.amount});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.itemDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.itemDGV.Location = new System.Drawing.Point(0, 131);
             this.itemDGV.Name = "itemDGV";
             this.itemDGV.ReadOnly = true;
@@ -333,52 +342,6 @@
             this.itemDGV.TabIndex = 4;
             this.itemDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDGV_CellContentClick);
             this.itemDGV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemDGV_KeyDown);
-            // 
-            // franchiseeName
-            // 
-            this.franchiseeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.franchiseeName.HeaderText = "商家名称";
-            this.franchiseeName.Name = "franchiseeName";
-            this.franchiseeName.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 200F;
-            this.name.HeaderText = "商品名称";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.price.HeaderText = "单价";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // substract
-            // 
-            this.substract.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.substract.HeaderText = "";
-            this.substract.Name = "substract";
-            this.substract.ReadOnly = true;
-            this.substract.Width = 50;
-            // 
-            // amount
-            // 
-            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.amount.HeaderText = "数量";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            this.amount.Width = 50;
-            // 
-            // add
-            // 
-            this.add.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.add.HeaderText = "";
-            this.add.Name = "add";
-            this.add.ReadOnly = true;
-            this.add.Width = 50;
             // 
             // footerP
             // 
@@ -475,16 +438,42 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "合计：";
             // 
-            // button1
+            // franchiseeName
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(757, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 26);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "新增地址";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.franchiseeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.franchiseeName.HeaderText = "商家名称";
+            this.franchiseeName.Name = "franchiseeName";
+            this.franchiseeName.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.FillWeight = 200F;
+            this.name.HeaderText = "商品名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.price.HeaderText = "单价";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // 减少
+            // 
+            this.减少.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.减少.HeaderText = "减少";
+            this.减少.Name = "减少";
+            this.减少.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.amount.HeaderText = "数量";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            this.amount.Width = 50;
             // 
             // OrderConfirmItem
             // 
@@ -537,12 +526,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label taxTotalL;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn franchiseeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewButtonColumn substract;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 减少;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private System.Windows.Forms.DataGridViewButtonColumn add;
-        private System.Windows.Forms.Button button1;
     }
 }

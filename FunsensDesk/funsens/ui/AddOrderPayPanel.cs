@@ -223,8 +223,9 @@ namespace funsens.ui
                 row.Height = 120;
 
                 DataGridViewTextBoxCell idCell = new DataGridViewTextBoxCell();
-                idCell.Value = vo.Id;
+                idCell.Value =  vo.Id;
                 row.Cells.Add(idCell);
+                
 
                 DataGridViewTextBoxCell customerNameCell = new DataGridViewTextBoxCell();
                 customerNameCell.Value = vo.CustomerName;

@@ -38,12 +38,5 @@ namespace funsens.franchisee.vo
             get { return password; }
             set { password = value; }
         }
-
-        public string franchiseeName;
-        public string FranchiseeName
-        {
-            get { return franchiseeName; }
-            set { franchiseeName = value; }
-        }
     }
 }

@@ -433,6 +433,12 @@ namespace funsens.ui
             this.itemTotalL.Text = "￥" + itemTotal;
             this.freightL.Text = "￥" + freightTotal;
             this.taxTotalL.Text = "￥" + taxTotal;
+            if (taxTotal > 0)
+            {
+                pickupRB.Enabled = false;
+                expressRB.Checked = true;
+                pickupRB.Checked = false;
+            }
             this.totalL.Text = "￥" + total;
 
             this.addOrderConfirmPanel.refreshTotal();
@@ -484,9 +490,9 @@ namespace funsens.ui
                     amountCell.Value = detailsVO.Amount.ToString();
                     row.Cells.Add(amountCell);
 
-                    DataGridViewButtonCell addAmountCell = new DataGridViewButtonCell();
-                    addAmountCell.Value = "增加";
-                    row.Cells.Add(addAmountCell);
+                    //DataGridViewButtonCell addAmountCell = new DataGridViewButtonCell();
+                    //addAmountCell.Value = "增加";
+                    //row.Cells.Add(addAmountCell);
 
                     this.itemDGV.Rows.Add(row);
 
@@ -528,6 +534,8 @@ namespace funsens.ui
             this.nameTB.Text = session.CustomerName;
             this.telTB.Text = session.CustomerTel;
             this.addressTB.Text = session.CustomerAddress;
+            
+
             
         }
 
@@ -575,8 +583,10 @@ namespace funsens.ui
 
             if (e.ColumnIndex == 3)
                 addOrderConfirmPanel.resetAmount(detailsVO.ItemId, -1);
-            else if (e.ColumnIndex == 5)
-                addOrderConfirmPanel.resetAmount(detailsVO.ItemId, +1);
+            
+           
+            //else if (e.ColumnIndex == 5)
+            //    addOrderConfirmPanel.resetAmount(detailsVO.ItemId, +1);
         }
 
         private void districtCB_SelectedIndexChanged(object sender, EventArgs e)

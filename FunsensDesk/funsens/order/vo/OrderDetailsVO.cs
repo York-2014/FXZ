@@ -72,6 +72,9 @@ namespace funsens.order.vo
             set { barcode = value; }
         }
 
+
+       
+
         public OrderDetailsVO()
         {
 
@@ -86,7 +89,7 @@ namespace funsens.order.vo
             this.itemPrice = jo.getFloat("price");
             this.amount = jo.getInt("productVolume");
             this.total = jo.getFloat("productPrice");
-            this.barcode = jo.getString("Barcode");
+            this.barcode = jo.getString("barcode");
         }
 
         public void loadConfirm(JO jo)
@@ -96,7 +99,7 @@ namespace funsens.order.vo
             this.itemImageUrl = jo.getString("pic");
             this.itemPrice = jo.getFloat("price");
             this.amount = jo.getInt("quantity");
-            this.barcode = jo.getString("Barcode");
+            this.barcode = jo.getString("barcode");
         }
     }
 }

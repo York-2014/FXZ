@@ -200,11 +200,11 @@
             // payB
             // 
             this.payB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.payB.Location = new System.Drawing.Point(858, 29);
+            this.payB.Location = new System.Drawing.Point(841, 38);
             this.payB.Name = "payB";
             this.payB.Size = new System.Drawing.Size(120, 37);
             this.payB.TabIndex = 0;
-            this.payB.Text = "支付";
+            this.payB.Text = "生成订单";
             this.payB.UseVisualStyleBackColor = true;
             this.payB.Click += new System.EventHandler(this.payB_Click);
             // 

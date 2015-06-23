@@ -179,11 +179,8 @@ C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Debug\funsens.Properties.R
 C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Debug\FunsensDesk.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Debug\FunsensDesk.csprojResolveAssemblyReference.cache
 D:\Funsens\trunk\bin\Debug\Main\funsens.exe.config
-D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.exe
-D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.pdb
 D:\Funsens\trunk\bin\Debug\Main\funsens.exe
 D:\Funsens\trunk\bin\Debug\Main\funsens.pdb
-D:\Funsens\trunk\FunsensDesk\obj\Debug\FunsensDesk.csprojResolveAssemblyReference.cache
 D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.g.resources
 D:\Funsens\trunk\FunsensDesk\obj\Debug\instock.InStockForm.resources
 D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.ui.AddOrderPanel.resources
@@ -211,3 +208,5 @@ D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.ui.SignUpPanel.resources
 D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.ui.TitlePanel.resources
 D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.Properties.Resources.resources
 D:\Funsens\trunk\FunsensDesk\obj\Debug\FunsensDesk.csproj.GenerateResource.Cache
+D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.exe
+D:\Funsens\trunk\FunsensDesk\obj\Debug\funsens.pdb

@@ -315,9 +315,9 @@ namespace funsens.order.vo
                 this.itemList.Add(itemVO);
 
                 OrderDetailsVO detailsVO = new OrderDetailsVO();
+                detailsVO.Barcode = itemJO.getString("barcode");
                 detailsVO.ItemId = itemJO.getString("productId");
                 detailsVO.ItemName = itemJO.getString("productName");
-                detailsVO.Barcode = itemJO.getString("barcode");
                 float itemPrice = itemJO.getFloat("price");
                 int itemAmount = itemJO.getInt("productVolume");
                 detailsVO.ItemPrice = itemPrice;
@@ -380,7 +380,7 @@ namespace funsens.order.vo
             this.franchiseeName = jo.getString("company");
             this.itemTotal = jo.getFloat("sumprice");   //商品总金额（未包含税和运费）
             this.taxTotal = jo.getFloat("sumtax");  //税费
-               
+
             this.mailFreight = jo.getFloat("mail");
             this.emsFreight = jo.getFloat("ems");
             this.expressFreight = jo.getFloat("express");

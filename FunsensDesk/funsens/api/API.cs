@@ -11,8 +11,10 @@ namespace funsens.api
     /// </summary>
     class API
     {
+
         private static readonly string SERVER = "http://www.funsens.com/api/";
-       // private static readonly string SERVER = "http://120.25.216.73/api/";
+       // private static readonly string SERVER = "http://www.funsens.test/api/";
+        //private static readonly string SERVER = "http://120.25.216.73/api/";
 
         public const int T_DISTRICTS = 1001;
 

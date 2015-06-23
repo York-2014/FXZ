@@ -78,8 +78,11 @@ namespace funsens.ui
                 {
                     itemVO.Amount += itemAmount;
 
-                    if (itemVO.Amount < 1)
-                        itemVO.Amount = 1;
+                    if (itemVO.Amount < 0)
+                    
+                        
+                        itemVO.Amount = 0;
+                  
 
                     break;
                 }

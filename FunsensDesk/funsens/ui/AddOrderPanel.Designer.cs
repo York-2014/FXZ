@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barcodeTB = new System.Windows.Forms.TextBox();
             this.addItemB = new System.Windows.Forms.Button();
             this.itemDGV = new System.Windows.Forms.DataGridView();
@@ -51,6 +51,7 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addAmount = new System.Windows.Forms.DataGridViewButtonColumn();
             this.剩余库存 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.冻结库存 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.footerP.SuspendLayout();
             this.SuspendLayout();
@@ -78,14 +79,14 @@
             // itemDGV
             // 
             this.itemDGV.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.franchiseeName,
@@ -95,20 +96,21 @@
             this.subtractAmount,
             this.amount,
             this.addAmount,
-            this.剩余库存});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.itemDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            this.剩余库存,
+            this.冻结库存});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.itemDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.itemDGV.Location = new System.Drawing.Point(8, 102);
             this.itemDGV.Name = "itemDGV";
             this.itemDGV.RowTemplate.Height = 23;
             this.itemDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemDGV.Size = new System.Drawing.Size(756, 207);
+            this.itemDGV.Size = new System.Drawing.Size(814, 207);
             this.itemDGV.TabIndex = 2;
             this.itemDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDGV_CellContentClick);
             this.itemDGV.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDGV_CellValueChanged);
@@ -276,6 +278,13 @@
             this.剩余库存.HeaderText = "剩余库存";
             this.剩余库存.Name = "剩余库存";
             // 
+            // 冻结库存
+            // 
+            this.冻结库存.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.冻结库存.HeaderText = "冻结库存";
+            this.冻结库存.Name = "冻结库存";
+            this.冻结库存.Width = 80;
+            // 
             // AddOrderPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -288,7 +297,7 @@
             this.Controls.Add(this.addItemB);
             this.Controls.Add(this.barcodeTB);
             this.Name = "AddOrderPanel";
-            this.Size = new System.Drawing.Size(794, 477);
+            this.Size = new System.Drawing.Size(825, 477);
             this.Load += new System.EventHandler(this.AddOrderPanel_Load);
             this.SizeChanged += new System.EventHandler(this.AddOrderPanel_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).EndInit();
@@ -322,5 +331,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewButtonColumn addAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn 剩余库存;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 冻结库存;
     }
 }

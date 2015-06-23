@@ -36,7 +36,7 @@ namespace funsens.ui
             List<OrderDetailsVO> detailsList = orderVO.DetailsList;
             int count = detailsList.Count;
             string itemContent = "";
-            float T = 0;
+            float T = 0,q=0;
             for (int i = 0; i < count; i++)
             {
                 OrderDetailsVO detailsVO = detailsList[i];
@@ -45,6 +45,8 @@ namespace funsens.ui
                 itemContent += this.formatName(detailsVO.ItemName).Trim() + "\r\n " + string.Format("{0:##########}", detailsVO.Barcode).PadRight(15) + string.Format("{0:##########}", detailsVO.Amount).PadRight(9) + "￥" + detailsVO.Total + "\r\n";
 
                 T += detailsVO.Amount;
+                q += detailsVO.Total;
+               // string  tr=detailsVO.
                 /*int l = detailsVO.ItemName.Length;
                 if (l > 10)
                     itemContent += ((i + 1) + " " + detailsVO.ItemName.Substring(0, 10) + "\r\n  " + detailsVO.ItemName.Substring(10) + " ￥" + detailsVO.Total + "\r\n");
@@ -68,7 +70,7 @@ namespace funsens.ui
                     tax = orderVO.TaxTotal;
             }
             content1 = content1.Replace("ITEM_COUNT", "" + T + "".PadRight(7));
-            content1 = content1.Replace("ITEM_AMOUNT", "￥" + orderVO.Payment);
+            content1 = content1.Replace("ITEM_AMOUNT", "￥" + q);
             content1 = content1.Replace("UN_PAY_TAX", "" + orderVO.UnPayTax);
             content1 = content1.Replace("TAX", "" + tax);
             float untax = 0.0f;
