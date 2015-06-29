@@ -144,7 +144,9 @@ namespace funsens.ui
         private void addressDGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.vo = this.addressList[e.RowIndex];
+           
             this.mainFormCallback(MainForm.PT_ADDESS_SELECTOR_FINISH);
+           
         }
 
         private void selectB_Click(object sender, EventArgs e)

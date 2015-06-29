@@ -56,6 +56,15 @@
   <PropertyGroup>
     <ApplicationIcon>funsens_logo.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BarcodeLib">
       <HintPath>lib\BarcodeLib.dll</HintPath>
@@ -260,9 +269,11 @@
     <Compile Include="funsens\ui\TitlePanel.Designer.cs">
       <DependentUpon>TitlePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="funsens\util\AppConfig.cs" />
     <Compile Include="funsens\util\BarcodeUtil.cs" />
     <Compile Include="funsens\util\Base64Util.cs" />
-    <Compile Include="funsens\util\RegisterUtil.cs" />
+    <Compile Include="funsens\util\Common.cs" />
+    <Compile Include="funsens\util\XmlHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="funsens\api\SignUpHandler.cs" />
@@ -355,6 +366,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -398,6 +410,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="funsens_logo.ico" />
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

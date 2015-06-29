@@ -37,13 +37,42 @@ namespace funsens.common
             get { return customerTel; }
             set { customerTel = value; }
         }
+        private string province;
 
+         public string Province
+        {
+            get { return province; }
+            set { province = value; }
+        }
+
+
+        private string cityname;
+        public string Cityname
+        {
+            get { return cityname; }
+            set { cityname = value; }
+        }
+
+
+        private string areaname;
+        public string Areaname
+        {
+            get { return areaname; }
+            set { areaname = value; }
+        }
 
         private string customerAddress;
         public string CustomerAddress
         {
             get { return customerAddress; }
             set { customerAddress = value; }
+        }
+
+        private string  zipcode;
+        public string Zipcode
+        {
+            get { return zipcode; }
+            set { zipcode = value; }
         }
 
         private CookieContainer cookie;
@@ -86,7 +115,11 @@ namespace funsens.common
             this.customerName = null;
             this.customerTel = null;
             this.customerAddress = null;
-            
+            this.areaname = null;
+            this.cityname = null;
+            this.province = null;
+            this.zipcode = null;
+
         }
 
         public bool isCustomerSign()

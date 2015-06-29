@@ -31,6 +31,8 @@ namespace funsens.ui
 
         public MainForm.MainFormCallback mainFormCallback;
 
+        public static string shopname="";
+
         //private ImagePool.ImagePoolCallback _imagePoolCallback;
 
         //private ImagePool imagePool;
@@ -288,6 +290,8 @@ namespace funsens.ui
 
                     //if (null != vo.Image)
                     //    row.Cells[0].Value = vo.Image;
+                   
+                       
 
                     row.Cells[0].Value = vo.FranchiseeName;
 
@@ -299,7 +303,7 @@ namespace funsens.ui
 
                     row.Cells[7].Value = vo.Stock;
 
-                    row.Cells[8].Value = vo.StoreStock;
+                    //row.Cells[8].Value = vo.StoreStock;
                 }
             }
             else
@@ -330,7 +334,7 @@ namespace funsens.ui
         private void uiItemDGVAdd(ItemVO vo)
         {
             DataGridViewRow row = new DataGridViewRow();
-            row.Height = 100;
+            row.Height = 50;
 
             //DataGridViewImageCell imageCell = new DataGridViewImageCell();
             //if (null != vo.Image)
@@ -341,6 +345,8 @@ namespace funsens.ui
             DataGridViewTextBoxCell franchiseeNameCell = new DataGridViewTextBoxCell();
             franchiseeNameCell.Value = vo.FranchiseeName;
             row.Cells.Add(franchiseeNameCell);
+
+            //shopname = vo.FranchiseeName;
 
             DataGridViewTextBoxCell nameCell = new DataGridViewTextBoxCell();
             nameCell.Value = vo.Name;
@@ -371,9 +377,9 @@ namespace funsens.ui
             StockCell.Value = vo.Stock.ToString();
             row.Cells.Add(StockCell);
 
-            DataGridViewTextBoxCell StoreStockCell = new DataGridViewTextBoxCell();
-            StoreStockCell.Value = vo.StoreStock.ToString();
-            row.Cells.Add(StoreStockCell);
+            //DataGridViewTextBoxCell StoreStockCell = new DataGridViewTextBoxCell();
+            //StoreStockCell.Value = vo.StoreStock.ToString();
+            //row.Cells.Add(StoreStockCell);
 
             this.itemDGV.Rows.Add(row);
 
@@ -491,7 +497,7 @@ namespace funsens.ui
                 MessageBox.Show("请选择要购买的商品");
                 return;
             }
-
+            shopname = this.itemList[0].FranchiseeName.ToString();
             this.mainFormCallback(MainForm.PT_ADD_ORDER_CONFIRM);
         }
 

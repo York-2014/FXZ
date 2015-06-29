@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using x.util;
 using funsens.order.vo;
+using funsens.ui;
 
 namespace funsens.ui
 {
@@ -29,7 +30,10 @@ namespace funsens.ui
         {
             string content1 = this.richTextBox1.Text;
 
-            content1 = content1.Replace("FRANCHISEE_NAME", orderVO.FranchiseeName);
+            //content1 = content1.Replace("FRANCHISEE_NAME", orderVO.FranchiseeName);
+            AddOrderPanel t= new AddOrderPanel();
+
+            content1 = content1.Replace("FRANCHISEE_NAME", AddOrderPanel.shopname);
 
             content1 = content1.Replace("ORDER_ID", "订单号：" + orderVO.Id);
 

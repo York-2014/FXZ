@@ -67,6 +67,7 @@ namespace funsens.api
         private void handleGet()
         {
             HTTP http = new HTTP();
+            
             HTTPResult result = http.get(this.url, Session.getInstance().Cookie);
 
             this._callback(this.type, result.isSuccess() ? RC_SUCCESS : RC_FAILED, null, result.getContent());

@@ -12,8 +12,8 @@ namespace funsens.api
     class API
     {
 
-        private static readonly string SERVER = "http://www.funsens.com/api/";
-       // private static readonly string SERVER = "http://www.funsens.test/api/";
+        //private static readonly string SERVER = "http://www.funsens.com/api/";
+        private static readonly string SERVER = "http://www.funsens.test/api/";
         //private static readonly string SERVER = "http://120.25.216.73/api/";
 
         public const int T_DISTRICTS = 1001;
@@ -63,5 +63,8 @@ namespace funsens.api
         public static readonly string URL_GET_SERVICE_DESKS = SERVER + "window.php";
 
         public static readonly string URL_SHELF = SERVER + "shelf.php";
+
+
+        public static readonly string URL_SHOP = SERVER + "shop.php?uid=";
     }
 }

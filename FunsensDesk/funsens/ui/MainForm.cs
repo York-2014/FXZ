@@ -333,9 +333,11 @@ namespace funsens.ui
             this.itemS.Visible = false;
 
             //设置主窗口的标题
+
+            //"http://www.funsens.com/shop.php?uid=" + Session.getInstance().FranchiseeVO.Id;
             this.Text = string.Format("风信子 v{0} - {1}"
                 , System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
-                , Session.getInstance().FranchiseeVO.Name);// "风信子 v6.12- " + Session.getInstance().FranchiseeVO.Name;
+                , Session.getInstance().FranchiseeVO.Name );// "风信子 v6.12- " + Session.getInstance().FranchiseeVO.Name;
         }
 
         /// <summary>

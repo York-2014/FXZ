@@ -419,7 +419,7 @@ namespace funsens.ui
             if (orderVO.Status != OrderVO.STATUS_UN_PAY)
             {
                 orderDGV.Rows[e.RowIndex].Cells[4] = new DataGridViewTextBoxCell();
-                orderDGV.Rows[e.RowIndex].Cells[4].Value = "";
+                orderDGV.Rows[e.RowIndex].Cells[4].Value = "不出票重新支付";
             }
         }
     }

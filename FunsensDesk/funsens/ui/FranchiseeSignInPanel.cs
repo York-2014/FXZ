@@ -28,13 +28,19 @@ namespace funsens.ui
 
         public MainForm.MainFormCallback mainFormCallback;
 
-        private List<RegsiterUserInfo> lstRegUserInfo = new List<RegsiterUserInfo>();
+        private List<LocalUserEntity> lstLocalUserInfo = new List<LocalUserEntity>();
+
+        private LocalUserEntity localUserInfo;
+
+        private string strCpuID;
 
         public FranchiseeSignInPanel()
         {
             InitializeComponent();
 
             this.uiInitView();
+
+            strCpuID = Base64Util.EncodeBase64(Common.GetCpuID());
         }
 
         private void signIn()
@@ -136,35 +142,33 @@ namespace funsens.ui
                 session.FranchiseeVO.Name = name;
                 session.FranchiseeVO.Username = tel;
 
-                //判断记住密码复选框
-                if (this.checkBox_SavePassword.Checked)
-                {
-                    //保存记住密码复选框为勾选状态
-                    RegisterUtil.SetRegistryData(session.FranchiseeVO.Username, "CheckedPassword", "true");
-                    //保存密码
-                    RegisterUtil.SetRegistryData(session.FranchiseeVO.Username, "Password", Base64Util.EncodeBase64((Base64Util.EncodeBase64(passwordTB.Text))));
-                }
-                else
-                {
-                    //保存记住密码复选框为未勾选状态
-                    RegisterUtil.SetRegistryData(session.FranchiseeVO.Username, "CheckedPassword", "false");
-                    //清空密码
-                    RegisterUtil.SetRegistryData(session.FranchiseeVO.Username, "Password", string.Empty);
-                }
-
                 //判断记住用户名复选框
                 if (this.checkBox_SaveUserName.Checked)
                 {
-                    //保存记住用户名复选框为勾选状态
-                    RegisterUtil.SetRegistryData(session.FranchiseeVO.Username, "CheckedUserName", "true");
+                    localUserInfo = new LocalUserEntity();
+                    localUserInfo.UserName = session.FranchiseeVO.Username;
+
+                    localUserInfo.CheckedUserName = true;
+                    localUserInfo.UpdateTime = DateTime.Now;
+
+                    //判断记住密码复选框
+                    if (this.checkBox_SavePassword.Checked)
+                    {
+                        localUserInfo.CheckedPassword = true;
+                        localUserInfo.Password = Base64Util.EncodeBase64(Base64Util.EncodeBase64(passwordTB.Text) + strCpuID);
+                    }
+                    else
+                    {
+                        localUserInfo.CheckedPassword = false;
+                        localUserInfo.Password = string.Empty;
+                    }
+
+                    AppConfig.UpdateLocalUserInfo(localUserInfo);
                 }
                 else
                 {
                     this.checkBox_SavePassword.Checked = false;
-                    if (RegisterUtil.IsRegUserNameExist(string.Empty, session.FranchiseeVO.Username))
-                    {
-                        RegisterUtil.DeleteRegist(string.Empty, session.FranchiseeVO.Username);
-                    }
+                    AppConfig.DeleteLocalUserInfo(session.FranchiseeVO.Username);
                 }
 
                 _delegate = new _Delegate(this.back);
@@ -214,25 +218,25 @@ namespace funsens.ui
         {
             this.uiResize();
 
-            //加载保存在本地注册表中的用户信息
+            #region 加载保存在配置文件中的本地用户信息
             try
             {
-                lstRegUserInfo = RegisterUtil.GetAllRegUserInfo();
-                foreach (RegsiterUserInfo item in lstRegUserInfo)
+                //加载保存在配置文件中的本地用户信息
+                lstLocalUserInfo = AppConfig.GetAllLocalUserInfo();
+                foreach (LocalUserEntity entity in lstLocalUserInfo)
                 {
-                    usernameTB.Items.Add(item.UserName);
+                    this.usernameTB.Items.Add(entity.UserName);
+                }
+                if (this.usernameTB.Items.Count > 0)
+                {
+                    this.usernameTB.SelectedIndex = 0;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //异常则忽略
+                //忽略异常
             }
-
-            if (usernameTB.Items.Count > 0)
-            {
-                //加载最后一个
-                usernameTB.SelectedIndex = usernameTB.Items.Count - 1;
-            }
+            #endregion
         }
 
         private void FranchiseeSignIn_SizeChanged(object sender, EventArgs e)
@@ -255,10 +259,17 @@ namespace funsens.ui
 
         private void usernameTB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            usernameTB.Text = lstRegUserInfo[usernameTB.SelectedIndex].UserName;
-            passwordTB.Text = Base64Util.DecodeBase64(Base64Util.DecodeBase64(lstRegUserInfo[usernameTB.SelectedIndex].PassWord));
-            checkBox_SaveUserName.Checked = lstRegUserInfo[usernameTB.SelectedIndex].CheckedUserName;
-            checkBox_SavePassword.Checked = lstRegUserInfo[usernameTB.SelectedIndex].CheckedPassword;
+            usernameTB.Text = lstLocalUserInfo[usernameTB.SelectedIndex].UserName;
+            if (false == string.IsNullOrEmpty(lstLocalUserInfo[usernameTB.SelectedIndex].Password))
+            {
+                passwordTB.Text = Base64Util.DecodeBase64(Base64Util.DecodeBase64(lstLocalUserInfo[usernameTB.SelectedIndex].Password).Replace(strCpuID, string.Empty));
+            }
+            else
+            {
+                passwordTB.Text = string.Empty;
+            }
+            checkBox_SaveUserName.Checked = lstLocalUserInfo[usernameTB.SelectedIndex].CheckedUserName;
+            checkBox_SavePassword.Checked = lstLocalUserInfo[usernameTB.SelectedIndex].CheckedPassword;
         }
 
         private void checkBox_SavePassword_CheckedChanged(object sender, EventArgs e)
@@ -288,10 +299,17 @@ namespace funsens.ui
             }
             else
             {
-                usernameTB.Text = lstRegUserInfo[index].UserName;
-                passwordTB.Text = Base64Util.DecodeBase64(Base64Util.DecodeBase64(lstRegUserInfo[index].PassWord));
-                checkBox_SaveUserName.Checked = lstRegUserInfo[index].CheckedUserName;
-                checkBox_SavePassword.Checked = lstRegUserInfo[index].CheckedPassword;
+                usernameTB.Text = lstLocalUserInfo[index].UserName;
+                if (false == string.IsNullOrEmpty(lstLocalUserInfo[usernameTB.SelectedIndex].Password))
+                {
+                    passwordTB.Text = Base64Util.DecodeBase64(Base64Util.DecodeBase64(lstLocalUserInfo[usernameTB.SelectedIndex].Password).Replace(strCpuID, string.Empty));
+                }
+                else
+                {
+                    passwordTB.Text = string.Empty;
+                }
+                checkBox_SavePassword.Checked = lstLocalUserInfo[index].CheckedPassword;
+                checkBox_SaveUserName.Checked = lstLocalUserInfo[index].CheckedUserName;
             }
         }
     }

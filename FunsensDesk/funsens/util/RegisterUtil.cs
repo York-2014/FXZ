@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace funsens.util
 {
-    class RegsiterUserInfo
+    class LocalUserEntity
     {
         private string userName;
         public string UserName
@@ -16,11 +16,11 @@ namespace funsens.util
             set { userName = value; }
         }
 
-        private string passWord;
-        public string PassWord
+        private string password;
+        public string Password
         {
-            get { return passWord; }
-            set { passWord = value; }
+            get { return password; }
+            set { password = value; }
         }
 
         private bool checkedUserName;
@@ -37,22 +37,29 @@ namespace funsens.util
             set { checkedPassword = value; }
         }
 
+        private DateTime updateTime;
+        public DateTime UpdateTime
+        {
+            get { return updateTime; }
+            set { updateTime = value; }
+        }
+
     }
 
     class RegisterUtil
     {
         private static readonly string subkey = "software\\funsens";
 
-        public static List<RegsiterUserInfo> GetAllRegUserInfo()
+        public static List<LocalUserEntity> GetAllRegUserInfo()
         {
-            List<RegsiterUserInfo> lstRegUserInfo = new List<RegsiterUserInfo>();
+            List<LocalUserEntity> lstRegUserInfo = new List<LocalUserEntity>();
             RegistryKey root = Registry.LocalMachine;
             RegistryKey myKey = root.OpenSubKey(subkey, true);
             string[] subkeyNames = myKey.GetSubKeyNames();
-            RegsiterUserInfo userInfo;
+            LocalUserEntity userInfo;
             foreach (string aimKey in subkeyNames)
             {
-                userInfo = new RegsiterUserInfo();
+                userInfo = new LocalUserEntity();
                 myKey = root.OpenSubKey(subkey + "\\" + aimKey, true);
                 userInfo.CheckedPassword = Convert.ToBoolean(myKey.GetValue("CheckedPassword").ToString());
                 userInfo.CheckedUserName = Convert.ToBoolean(myKey.GetValue("CheckedUserName").ToString());

@@ -138,6 +138,7 @@ namespace funsens.ui
                 string tel = jo.getString("mobile");
 
                 JO addressJO = jo.getJO("address");
+                //string userId = addressJO.getString("userid");
 
                 if (S.blank(tel) || null == addressJO)
                 {
@@ -148,12 +149,29 @@ namespace funsens.ui
                 }
 
                 string address = addressJO.getString("address");
+                
+                string []sArray = addressJO.getString("area").Split(' ');
+                string province ="";
+                string cityname ="";
+                string areaname ="";
+                if (sArray.Length>2)
+                {
+                     province = sArray[0];
+                     cityname = sArray[1];
+                     areaname = sArray[2];
+                }
+                
+                string zipcode = addressJO.getString("zip");
 
                 Session session = Session.getInstance();
                 session.IcNo = icNo;
-                session.CustomerName = name;
+                session.CustomerName = name ;
                 session.CustomerTel = tel;
                 session.CustomerAddress = address;
+                session.Province = province;
+                session.Cityname = cityname;
+                session.Areaname = areaname;
+                session.Zipcode = zipcode;
 
                 _delegate = new _Delegate(this.back);
                 this.Invoke(_delegate);

@@ -91,7 +91,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(231, 47);
+            this.label6.Location = new System.Drawing.Point(220, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 19);
             this.label6.TabIndex = 11;
@@ -141,7 +141,7 @@
             // 
             this.taxTotalL.AutoSize = true;
             this.taxTotalL.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.taxTotalL.Location = new System.Drawing.Point(571, 11);
+            this.taxTotalL.Location = new System.Drawing.Point(571, 13);
             this.taxTotalL.Name = "taxTotalL";
             this.taxTotalL.Size = new System.Drawing.Size(68, 19);
             this.taxTotalL.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(474, 11);
+            this.label5.Location = new System.Drawing.Point(461, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 19);
             this.label5.TabIndex = 5;
@@ -171,7 +171,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(307, 12);
+            this.label3.Location = new System.Drawing.Point(296, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 3;
@@ -200,7 +200,7 @@
             // payB
             // 
             this.payB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.payB.Location = new System.Drawing.Point(841, 38);
+            this.payB.Location = new System.Drawing.Point(820, 38);
             this.payB.Name = "payB";
             this.payB.Size = new System.Drawing.Size(120, 37);
             this.payB.TabIndex = 0;

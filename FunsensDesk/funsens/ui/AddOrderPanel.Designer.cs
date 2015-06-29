@@ -51,7 +51,6 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addAmount = new System.Windows.Forms.DataGridViewButtonColumn();
             this.剩余库存 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.冻结库存 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.footerP.SuspendLayout();
             this.SuspendLayout();
@@ -96,8 +95,7 @@
             this.subtractAmount,
             this.amount,
             this.addAmount,
-            this.剩余库存,
-            this.冻结库存});
+            this.剩余库存});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -255,7 +253,7 @@
             this.subtractAmount.HeaderText = "";
             this.subtractAmount.Name = "subtractAmount";
             this.subtractAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.subtractAmount.Width = 80;
+            this.subtractAmount.Width = 60;
             // 
             // amount
             // 
@@ -270,20 +268,13 @@
             this.addAmount.Name = "addAmount";
             this.addAmount.ReadOnly = true;
             this.addAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.addAmount.Width = 80;
+            this.addAmount.Width = 60;
             // 
             // 剩余库存
             // 
             this.剩余库存.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.剩余库存.HeaderText = "剩余库存";
             this.剩余库存.Name = "剩余库存";
-            // 
-            // 冻结库存
-            // 
-            this.冻结库存.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.冻结库存.HeaderText = "冻结库存";
-            this.冻结库存.Name = "冻结库存";
-            this.冻结库存.Width = 80;
             // 
             // AddOrderPanel
             // 
@@ -331,6 +322,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewButtonColumn addAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn 剩余库存;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 冻结库存;
     }
 }

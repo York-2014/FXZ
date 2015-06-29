@@ -22,3 +22,4 @@ D:\Funsens\trunk\AppLoader\obj\Debug\AppLoader.Properties.Resources.resources
 D:\Funsens\trunk\AppLoader\obj\Debug\AppLoader.csproj.GenerateResource.Cache
 D:\Funsens\trunk\AppLoader\obj\Debug\AppLoader.exe
 D:\Funsens\trunk\AppLoader\obj\Debug\AppLoader.pdb
+D:\Funsens\trunk\AppLoader\obj\Debug\AppLoader.csprojResolveAssemblyReference.cache

@@ -482,13 +482,15 @@ namespace funsens.ui
                     priceCell.Value = detailsVO.ItemPrice.ToString();
                     row.Cells.Add(priceCell);
 
-                    DataGridViewButtonCell subtractAmountCell = new DataGridViewButtonCell();
-                    subtractAmountCell.Value = "减少";
-                    row.Cells.Add(subtractAmountCell);
+                   
 
                     DataGridViewTextBoxCell amountCell = new DataGridViewTextBoxCell();
                     amountCell.Value = detailsVO.Amount.ToString();
                     row.Cells.Add(amountCell);
+
+                    DataGridViewButtonCell subtractAmountCell = new DataGridViewButtonCell();
+                    subtractAmountCell.Value = "减少";
+                    row.Cells.Add(subtractAmountCell);
 
                     //DataGridViewButtonCell addAmountCell = new DataGridViewButtonCell();
                     //addAmountCell.Value = "增加";
@@ -534,6 +536,10 @@ namespace funsens.ui
             this.nameTB.Text = session.CustomerName;
             this.telTB.Text = session.CustomerTel;
             this.addressTB.Text = session.CustomerAddress;
+            this.provinceCB.Text = session.Province;
+            this.cityCB.Text = session.Cityname;
+            this.districtCB.Text = session.Areaname;
+            this.zipCodeTB.Text = session.Zipcode;
             
 
             
@@ -561,6 +567,7 @@ namespace funsens.ui
 
         private void selectAddressB_Click(object sender, EventArgs e)
         {
+            
             this.mainFormCallback(MainForm.PT_SHOW_ADDRESS_SELECTOR);
         }
 
@@ -581,7 +588,7 @@ namespace funsens.ui
 
             OrderDetailsVO detailsVO = this.vo.DetailsList[e.RowIndex];
 
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 4)
                 addOrderConfirmPanel.resetAmount(detailsVO.ItemId, -1);
             
            

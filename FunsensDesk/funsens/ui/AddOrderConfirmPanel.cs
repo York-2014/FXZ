@@ -57,7 +57,9 @@ namespace funsens.ui
         }
 
         public void setAddress(AddressVO addressVO)
+            
         {
+            
             this.itemViewList[this.selectAddressIndex].setAddress(addressVO);
         }
 

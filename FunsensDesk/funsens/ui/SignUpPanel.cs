@@ -137,6 +137,8 @@ namespace funsens.ui
                 string icNo = jo.getString("id_card");
                 string name = jo.getString("name");
                 string tel = jo.getString("mobile");
+                
+                
 
                 JO addressJO = jo.getJO("address");
 
@@ -148,12 +150,20 @@ namespace funsens.ui
                 }
 
                 string address = addressJO.getString("address");
+                string province = addressJO.getString("provincename");
+                string cityname = addressJO.getString("cityname");
+                string areaname = addressJO.getString("areaname");
+                string zipcode = addressJO.getString("zipcode");
 
                 Session session = Session.getInstance();
                 session.IcNo = icNo;
                 session.CustomerName = name;
                 session.CustomerTel = tel;
                 session.CustomerAddress = address;
+                session.Province = province;
+                session.Cityname = cityname;
+                session.Areaname = areaname;
+                session.Zipcode = zipcode;
 
                 _delegate = new _Delegate(this.callback);
                 this.Invoke(_delegate);
