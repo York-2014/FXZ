@@ -149,19 +149,19 @@ namespace funsens.ui
 
             this.customerNameL.Text = this.orderVO.CustomerName;
 
-            float total = this.orderVO.Payment;
+            double total = this.orderVO.Payment;
             if (this.orderVO.PaiedTax > 0)
             {
                 total += this.orderVO.TaxTotal;
             }
             else
             {
-                float tmp = this.orderVO.UnPayTax + this.orderVO.OrdersTax;
+                double tmp = this.orderVO.UnPayTax + this.orderVO.OrdersTax;
                 if (tmp > 50)
                     total += this.orderVO.TaxTotal;
             }
 
-            this.itemTotalL.Text = "￥" + total;
+            this.itemTotalL.Text = "￥" + Math.Round(total,2);
 
             this.unPayL.Text = "￥" + this.orderVO.UnPayTax;
 
@@ -217,7 +217,7 @@ namespace funsens.ui
             }
 
             Mis mis = new Mis(this.comPort);
-            bool result = mis.orderPay(this.orderVO.Payment, this.orderVO.Created, userId, this.orderVO.Id);
+            bool result = mis.orderPay(Math.Round(this.orderVO.Payment,2), this.orderVO.Created, userId, this.orderVO.Id);
 
             if (!result)
                 MessageBox.Show("调用失败");

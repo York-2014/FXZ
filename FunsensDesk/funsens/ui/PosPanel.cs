@@ -111,11 +111,11 @@ namespace funsens.ui
         /// <param name="e"></param>
         private void payPayB_Click(object sender, EventArgs e)
         {
-            float payment = 0.0f;
+            double payment = 0.00;
 
             try
             {
-                payment = float.Parse(this.spendPaymentTB.Text);
+                payment = double.Parse(this.spendPaymentTB.Text);
             }
             catch (Exception e1)
             {
@@ -222,6 +222,26 @@ namespace funsens.ui
                 MessageBox.Show("请求失败");
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)//汇总
+        {
+            Mis mis = new Mis(this.comPort);
+            bool result = mis.printallOrder();
+            if (result)
+                MessageBox.Show("请求成功");
+            else
+                MessageBox.Show("请求失败");
+        }
+
+        private void button2_Click(object sender, EventArgs e)//明细
+        {
+            Mis mis = new Mis(this.comPort);
+            bool result = mis.printdetails();
+            if (result)
+                MessageBox.Show("请求成功");
+            else
+                MessageBox.Show("请求失败");
+        }
+
+                
     }
 }

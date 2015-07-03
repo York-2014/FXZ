@@ -149,17 +149,23 @@ namespace funsens.ui
                 }
 
                 string address = addressJO.getString("address");
-                
-                string []sArray = addressJO.getString("area").Split(' ');
-                string province ="";
-                string cityname ="";
-                string areaname ="";
-                if (sArray.Length>2)
+                string area=addressJO.getString("area");
+                string province = "";
+                string cityname = "";
+                string areaname = "";
+                if(null != area && area.Length>0)
                 {
-                     province = sArray[0];
-                     cityname = sArray[1];
-                     areaname = sArray[2];
+                   string[] sArray = addressJO.getString("area").Split(' ');
+                if (sArray.Length > 2)
+                {
+                    province = sArray[0];
+                    cityname = sArray[1];
+                    areaname = sArray[2];
                 }
+                }
+               
+                
+               
                 
                 string zipcode = addressJO.getString("zip");
 

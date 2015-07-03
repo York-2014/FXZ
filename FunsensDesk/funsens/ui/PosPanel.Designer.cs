@@ -52,6 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.queryOrderB = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.spendGB.SuspendLayout();
             this.generalB.SuspendLayout();
             this.queryOrderGB.SuspendLayout();
@@ -66,7 +68,7 @@
             this.spendGB.Controls.Add(this.label1);
             this.spendGB.Controls.Add(this.spendPayB);
             this.spendGB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.spendGB.Location = new System.Drawing.Point(21, 404);
+            this.spendGB.Location = new System.Drawing.Point(21, 456);
             this.spendGB.Name = "spendGB";
             this.spendGB.Size = new System.Drawing.Size(743, 70);
             this.spendGB.TabIndex = 0;
@@ -181,9 +183,9 @@
             // settleB
             // 
             this.settleB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.settleB.Location = new System.Drawing.Point(33, 198);
+            this.settleB.Location = new System.Drawing.Point(611, 204);
             this.settleB.Name = "settleB";
-            this.settleB.Size = new System.Drawing.Size(75, 30);
+            this.settleB.Size = new System.Drawing.Size(82, 36);
             this.settleB.TabIndex = 4;
             this.settleB.Text = "结算";
             this.settleB.UseVisualStyleBackColor = true;
@@ -192,9 +194,9 @@
             // queryBalancesB
             // 
             this.queryBalancesB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.queryBalancesB.Location = new System.Drawing.Point(129, 198);
+            this.queryBalancesB.Location = new System.Drawing.Point(33, 204);
             this.queryBalancesB.Name = "queryBalancesB";
-            this.queryBalancesB.Size = new System.Drawing.Size(108, 30);
+            this.queryBalancesB.Size = new System.Drawing.Size(156, 36);
             this.queryBalancesB.TabIndex = 5;
             this.queryBalancesB.Text = "查询余额";
             this.queryBalancesB.UseVisualStyleBackColor = true;
@@ -203,20 +205,20 @@
             // prePrintB
             // 
             this.prePrintB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.prePrintB.Location = new System.Drawing.Point(259, 198);
+            this.prePrintB.Location = new System.Drawing.Point(33, 264);
             this.prePrintB.Name = "prePrintB";
-            this.prePrintB.Size = new System.Drawing.Size(156, 30);
+            this.prePrintB.Size = new System.Drawing.Size(156, 37);
             this.prePrintB.TabIndex = 6;
-            this.prePrintB.Text = "重打印上一单";
+            this.prePrintB.Text = "重打上一单";
             this.prePrintB.UseVisualStyleBackColor = true;
             this.prePrintB.Click += new System.EventHandler(this.prePrintB_Click);
             // 
             // printSettleB
             // 
             this.printSettleB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.printSettleB.Location = new System.Drawing.Point(433, 198);
+            this.printSettleB.Location = new System.Drawing.Point(419, 264);
             this.printSettleB.Name = "printSettleB";
-            this.printSettleB.Size = new System.Drawing.Size(122, 30);
+            this.printSettleB.Size = new System.Drawing.Size(154, 37);
             this.printSettleB.TabIndex = 7;
             this.printSettleB.Text = "重打结算单";
             this.printSettleB.UseVisualStyleBackColor = true;
@@ -225,9 +227,9 @@
             // queryLastOrder
             // 
             this.queryLastOrder.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.queryLastOrder.Location = new System.Drawing.Point(579, 198);
+            this.queryLastOrder.Location = new System.Drawing.Point(217, 264);
             this.queryLastOrder.Name = "queryLastOrder";
-            this.queryLastOrder.Size = new System.Drawing.Size(185, 30);
+            this.queryLastOrder.Size = new System.Drawing.Size(174, 37);
             this.queryLastOrder.TabIndex = 8;
             this.queryLastOrder.Text = "查询最后一笔交易";
             this.queryLastOrder.UseVisualStyleBackColor = true;
@@ -239,9 +241,9 @@
             this.queryOrderGB.Controls.Add(this.label3);
             this.queryOrderGB.Controls.Add(this.queryOrderB);
             this.queryOrderGB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.queryOrderGB.Location = new System.Drawing.Point(21, 305);
+            this.queryOrderGB.Location = new System.Drawing.Point(21, 350);
             this.queryOrderGB.Name = "queryOrderGB";
-            this.queryOrderGB.Size = new System.Drawing.Size(394, 74);
+            this.queryOrderGB.Size = new System.Drawing.Size(552, 74);
             this.queryOrderGB.TabIndex = 9;
             this.queryOrderGB.TabStop = false;
             this.queryOrderGB.Text = "交易查询";
@@ -250,7 +252,7 @@
             // 
             this.queryOrderIdTB.Location = new System.Drawing.Point(117, 31);
             this.queryOrderIdTB.Name = "queryOrderIdTB";
-            this.queryOrderIdTB.Size = new System.Drawing.Size(135, 29);
+            this.queryOrderIdTB.Size = new System.Drawing.Size(253, 29);
             this.queryOrderIdTB.TabIndex = 2;
             // 
             // label3
@@ -264,9 +266,9 @@
             // 
             // queryOrderB
             // 
-            this.queryOrderB.Location = new System.Drawing.Point(275, 31);
+            this.queryOrderB.Location = new System.Drawing.Point(398, 31);
             this.queryOrderB.Name = "queryOrderB";
-            this.queryOrderB.Size = new System.Drawing.Size(75, 30);
+            this.queryOrderB.Size = new System.Drawing.Size(75, 33);
             this.queryOrderB.TabIndex = 0;
             this.queryOrderB.Text = "查询";
             this.queryOrderB.UseVisualStyleBackColor = true;
@@ -282,10 +284,34 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "POS机操作界面";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(217, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 36);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "汇总查询";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(419, 204);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 36);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "查询交易明细";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // PosPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.queryOrderGB);
             this.Controls.Add(this.queryLastOrder);
@@ -335,5 +361,7 @@
         private System.Windows.Forms.TextBox cancelSpendOrderIdTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

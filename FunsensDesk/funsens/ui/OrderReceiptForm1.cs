@@ -40,7 +40,7 @@ namespace funsens.ui
             List<OrderDetailsVO> detailsList = orderVO.DetailsList;
             int count = detailsList.Count;
             string itemContent = "";
-            float T = 0,q=0;
+            double T = 0,q=0;
             for (int i = 0; i < count; i++)
             {
                 OrderDetailsVO detailsVO = detailsList[i];
@@ -62,14 +62,14 @@ namespace funsens.ui
 
             content1 = content1.Replace("FREIGHT", "" + (orderVO.EmsFreight + orderVO.ExpressFreight + orderVO.MailFreight));
 
-            float tax = 0.0f;
+            double tax = 0.00;
             if (orderVO.PaiedTax > 0)
             {
                 tax = orderVO.TaxTotal;
             }
             else
             {
-                float tmp = orderVO.UnPayTax + orderVO.OrdersTax;
+                double tmp = orderVO.UnPayTax + orderVO.OrdersTax;
                 if (tmp > 50)
                     tax = orderVO.TaxTotal;
             }
@@ -77,10 +77,10 @@ namespace funsens.ui
             content1 = content1.Replace("ITEM_AMOUNT", "￥" + q);
             content1 = content1.Replace("UN_PAY_TAX", "" + orderVO.UnPayTax);
             content1 = content1.Replace("TAX", "" + tax);
-            float untax = 0.0f;
+            double untax = 0.00;
             if (orderVO.UnPayTax > 50) untax = orderVO.UnPayTax;
            
-            content1 = content1.Replace("PAYMENT", "" + (orderVO.Payment + tax + untax));
+            content1 = content1.Replace("PAYMENT", "" + Math.Round((orderVO.Payment + tax + untax),2));
 
             if (null != orderVO.ExpressType && !"".Equals(orderVO.ExpressType))
                 content1 = content1.Replace("ADDRESS", this.formatAddress(orderVO.CustomerAddress));

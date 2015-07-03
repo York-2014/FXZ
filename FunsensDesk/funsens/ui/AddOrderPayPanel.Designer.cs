@@ -42,6 +42,7 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pay = new System.Windows.Forms.DataGridViewButtonColumn();
             this.receipt = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.刷新 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).BeginInit();
             this.footerP.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,8 @@
             this.payment,
             this.status,
             this.pay,
-            this.receipt});
+            this.receipt,
+            this.刷新});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -139,7 +141,7 @@
             // customerName
             // 
             this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.customerName.HeaderText = "付款人";
+            this.customerName.HeaderText = "收货人";
             this.customerName.Name = "customerName";
             this.customerName.ReadOnly = true;
             // 
@@ -162,7 +164,7 @@
             this.pay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.pay.HeaderText = "支付";
             this.pay.Name = "pay";
-            this.pay.Width = 60;
+            this.pay.Width = 70;
             // 
             // receipt
             // 
@@ -172,6 +174,13 @@
             this.receipt.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.receipt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.receipt.Width = 70;
+            // 
+            // 刷新
+            // 
+            this.刷新.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.刷新.HeaderText = "刷新";
+            this.刷新.Name = "刷新";
+            this.刷新.Width = 50;
             // 
             // AddOrderPayPanel
             // 
@@ -206,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewButtonColumn pay;
         private System.Windows.Forms.DataGridViewButtonColumn receipt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 刷新;
     }
 }

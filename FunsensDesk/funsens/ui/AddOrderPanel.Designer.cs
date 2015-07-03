@@ -51,6 +51,7 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addAmount = new System.Windows.Forms.DataGridViewButtonColumn();
             this.剩余库存 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.条形码 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.footerP.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +96,8 @@
             this.subtractAmount,
             this.amount,
             this.addAmount,
-            this.剩余库存});
+            this.剩余库存,
+            this.条形码});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -117,7 +119,7 @@
             // addOrderB
             // 
             this.addOrderB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addOrderB.Location = new System.Drawing.Point(543, 13);
+            this.addOrderB.Location = new System.Drawing.Point(549, 10);
             this.addOrderB.Name = "addOrderB";
             this.addOrderB.Size = new System.Drawing.Size(100, 40);
             this.addOrderB.TabIndex = 3;
@@ -246,12 +248,13 @@
             this.tax.HeaderText = "税率";
             this.tax.Name = "tax";
             this.tax.ReadOnly = true;
-            this.tax.Width = 80;
+            this.tax.Width = 50;
             // 
             // subtractAmount
             // 
             this.subtractAmount.HeaderText = "";
             this.subtractAmount.Name = "subtractAmount";
+            this.subtractAmount.ReadOnly = true;
             this.subtractAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.subtractAmount.Width = 60;
             // 
@@ -273,8 +276,18 @@
             // 剩余库存
             // 
             this.剩余库存.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.剩余库存.HeaderText = "剩余库存";
+            this.剩余库存.HeaderText = "库存";
             this.剩余库存.Name = "剩余库存";
+            this.剩余库存.ReadOnly = true;
+            this.剩余库存.Width = 70;
+            // 
+            // 条形码
+            // 
+            this.条形码.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.条形码.HeaderText = "条形码";
+            this.条形码.Name = "条形码";
+            this.条形码.ReadOnly = true;
+            this.条形码.Width = 90;
             // 
             // AddOrderPanel
             // 
@@ -322,5 +335,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewButtonColumn addAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn 剩余库存;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 条形码;
     }
 }

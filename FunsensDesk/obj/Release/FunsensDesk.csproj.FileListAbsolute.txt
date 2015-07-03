@@ -88,9 +88,8 @@ C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Release\funsens.ui.SignUpP
 C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Release\funsens.ui.TitlePanel.resources
 C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Release\funsens.Properties.Resources.resources
 C:\Users\Administrator\Desktop\开发\FunsensDesk\obj\Release\FunsensDesk.csproj.GenerateResource.Cache
+D:\Funsens\trunk\bin\Release\Main\Settings.xml
 D:\Funsens\trunk\bin\Release\Main\funsens.exe.config
-D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.exe
-D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.pdb
 D:\Funsens\trunk\bin\Release\Main\funsens.exe
 D:\Funsens\trunk\bin\Release\Main\funsens.pdb
 D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.g.resources
@@ -120,5 +119,6 @@ D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.ui.SignUpPanel.resources
 D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.ui.TitlePanel.resources
 D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.Properties.Resources.resources
 D:\Funsens\trunk\FunsensDesk\obj\Release\FunsensDesk.csproj.GenerateResource.Cache
+D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.exe
+D:\Funsens\trunk\FunsensDesk\obj\Release\funsens.pdb
 D:\Funsens\trunk\FunsensDesk\obj\Release\FunsensDesk.csprojResolveAssemblyReference.cache
-D:\Funsens\trunk\bin\Release\Main\Settings.xml

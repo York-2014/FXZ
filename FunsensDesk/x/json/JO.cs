@@ -103,16 +103,16 @@ namespace x.json
             return defaultValue;
         }
 
-        public float getFloat(string name)
+        public double getdouble(string name)
         {
-            return this.getFloat(name, -1);
+            return this.getdouble(name, -1);
         }
 
-        public float getFloat(string name, float defaultValue)
+        public double getdouble(string name, double defaultValue)
         {
             try
             {
-                float value = float.Parse((string)this.jo.GetValue(name));
+                double value = double.Parse((string)this.jo.GetValue(name));
                 return value;
             }
             catch (Exception e)

@@ -31,8 +31,8 @@ namespace funsens.order.vo
             set { itemImageUrl = value; }
         }
 
-        private float itemPrice;
-        public float ItemPrice
+        private double itemPrice;
+        public double ItemPrice
         {
             get { return itemPrice; }
             set { itemPrice = value; }
@@ -45,15 +45,15 @@ namespace funsens.order.vo
             set { amount = value; }
         }
 
-        private float tax;
-        public float Tax
+        private double tax;
+        public double Tax
         {
             get { return tax; }
             set { tax = value; }
         }
 
-        private float total;
-        public float Total
+        private double total;
+        public double Total
         {
             get { return total; }
             set { total = value; }
@@ -86,9 +86,9 @@ namespace funsens.order.vo
             this.itemId = jo.getString("productId");
             this.itemName = jo.getString("productName");
             this.itemImageUrl = jo.getString("picUrl");
-            this.itemPrice = jo.getFloat("price");
+            this.itemPrice = jo.getdouble("price");
             this.amount = jo.getInt("productVolume");
-            this.total = jo.getFloat("productPrice");
+            this.total = jo.getdouble("productPrice");
             this.barcode = jo.getString("barcode");
         }
 
@@ -97,7 +97,7 @@ namespace funsens.order.vo
             this.itemId = jo.getString("pid");
             this.itemName = jo.getString("pname");
             this.itemImageUrl = jo.getString("pic");
-            this.itemPrice = jo.getFloat("price");
+            this.itemPrice = jo.getdouble("price");
             this.amount = jo.getInt("quantity");
             this.barcode = jo.getString("barcode");
         }

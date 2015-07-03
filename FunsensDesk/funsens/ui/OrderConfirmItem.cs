@@ -22,7 +22,7 @@ namespace funsens.ui
     /// </summary>
     public partial class OrderConfirmItem : UserControl
     {
-        private const int ROW_HEIGHT = 80;
+        private const int ROW_HEIGHT = 55;
 
         private AddOrderConfirmPanel addOrderConfirmPanel;
 
@@ -40,20 +40,20 @@ namespace funsens.ui
 
         private OrderVO vo;
 
-        private float itemTotal;
-        public float ItemTotal
+        private double itemTotal;
+        public double ItemTotal
         {
             get { return itemTotal; }
         }
 
-        private float freightTotal;
-        public float FreightTotal
+        private double freightTotal;
+        public double FreightTotal
         {
             get { return freightTotal; }
         }
 
         //本次（包括拆分后的所有订单）所要交的税费，该值大于0表示本单需要交税
-        private float ordersTaxTotal;
+        private double ordersTaxTotal;
 
         public OrderConfirmItem(AddOrderConfirmPanel addOrderConfirmPanel)
         {
@@ -65,7 +65,7 @@ namespace funsens.ui
             //this.imagePool = new ImagePool(this._imagePoolCallback);
         }
 
-        public void setOrder(float ordersTaxTotal, OrderVO vo)
+        public void setOrder(double ordersTaxTotal, OrderVO vo)
         {
             this.ordersTaxTotal = ordersTaxTotal;
             this.vo = vo;
@@ -392,10 +392,10 @@ namespace funsens.ui
         /// </summary>
         private void uiRefreshTotal()
         {
-            this.itemTotal = 0.0f;
-            this.freightTotal = 0.0f;
-            float taxTotal = this.vo.TaxTotal;
-            float total = 0.0f;
+            this.itemTotal = 0.00;
+            this.freightTotal = 0.00;
+            double taxTotal = this.vo.TaxTotal;
+            double total = 0.00;
 
             if (null != this.vo)
             {
@@ -439,7 +439,7 @@ namespace funsens.ui
                 expressRB.Checked = true;
                 pickupRB.Checked = false;
             }
-            this.totalL.Text = "￥" + total;
+            this.totalL.Text = "￥" + Math.Round(total,2);
 
             this.addOrderConfirmPanel.refreshTotal();
         }
@@ -590,6 +590,7 @@ namespace funsens.ui
 
             if (e.ColumnIndex == 4)
                 addOrderConfirmPanel.resetAmount(detailsVO.ItemId, -1);
+            
             
            
             //else if (e.ColumnIndex == 5)

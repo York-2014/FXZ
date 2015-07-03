@@ -62,8 +62,9 @@ namespace funsens.ui
             DataGridViewRow row = new DataGridViewRow();
             row.Height = 100;
 
-            //DataGridViewImageCell imageCell = new DataGridViewImageCell();
-            //row.Cells.Add(imageCell);
+            DataGridViewTextBoxCell barcodeCell = new DataGridViewTextBoxCell();
+            barcodeCell.Value = vo.Barcode;
+            row.Cells.Add(barcodeCell);
 
             DataGridViewTextBoxCell franchiseeNameCell = new DataGridViewTextBoxCell();
             franchiseeNameCell.Value = vo.FranchiseeName;

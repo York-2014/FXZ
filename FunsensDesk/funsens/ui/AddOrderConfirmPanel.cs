@@ -43,13 +43,13 @@ namespace funsens.ui
         private int selectAddressIndex;
 
         //历史已交的税费
-        private float historyPayedTotalTax;
+        private double historyPayedTotalTax;
 
         //历史未交的税费
-        private float historyTaxTotal;
+        private double historyTaxTotal;
 
         //本次实际要交的税费
-        private float taxTotal;
+        private double taxTotal;
 
         public AddOrderConfirmPanel()
         {
@@ -80,10 +80,10 @@ namespace funsens.ui
                 {
                     itemVO.Amount += itemAmount;
 
-                    if (itemVO.Amount < 0)
-                    
-                        
-                        itemVO.Amount = 0;
+                    if (itemVO.Amount < 1)
+
+                        this.itemList.RemoveAt(i);
+                        //itemVO.Amount = 0;
                   
 
                     break;
@@ -141,8 +141,8 @@ namespace funsens.ui
             if (type == API.T_COUNT_ORDER_DETAILS)
             {
                 JA orderJA = jo.getJA("cart");
-                this.historyTaxTotal = jo.getFloat("historytax");
-                this.historyPayedTotalTax = jo.getFloat("historyPayedTax");
+                this.historyTaxTotal = jo.getdouble("historytax");
+                this.historyPayedTotalTax = jo.getdouble("historyPayedTax");
                 int count = orderJA.size();
                 if (count > 0)
                 {
@@ -160,7 +160,7 @@ namespace funsens.ui
                 }
                 else
                 {
-                    this.Invoke(showMessageDelegate, new object[] { "服务器异常，返回值为:\n" + content.ToString() });
+                    this.Invoke(showMessageDelegate, new object[] { "订单不能空，或者请重新下单！" });
                 }
             }
             else if (type == API.T_ADD_ORDER)
@@ -229,7 +229,7 @@ namespace funsens.ui
                         }
                         else
                         {
-                            this.Invoke(showMessageDelegate, new object[] { "服务器异常，返回内容：" + content.ToString() });
+                            this.Invoke(showMessageDelegate, new object[] { "服务器异常，订单数返回0，请重新下单！" });
                         }
                     }
                 }
@@ -272,7 +272,7 @@ namespace funsens.ui
             int w = this.orderP.ClientRectangle.Width;
 
             //计算总税费
-            this.taxTotal = 0.0f;
+            this.taxTotal = 0.00;
             for (int i = 0; i < count; i++)
             {
                 OrderVO orderVO = this.orderList[i];
@@ -306,9 +306,9 @@ namespace funsens.ui
 
         private void uiRefreshTotal()
         {
-            float itemTotal = 0.0f;
-            float freightTotal = 0.0f;
-            float total = 0.0f;
+            double itemTotal = 0.00;
+            double freightTotal = 0.00;
+            double total = 0.00;
 
             int count = this.itemViewList.Count;
             for (int i = 0; i < count; i++)
@@ -316,7 +316,7 @@ namespace funsens.ui
                 OrderConfirmItem item = this.itemViewList[i];
                 OrderVO orderVO = this.orderList[i];
 
-                itemTotal += item.ItemTotal;
+                itemTotal += Math.Round(item.ItemTotal,2);
                 freightTotal += item.FreightTotal;
             }
 
@@ -333,7 +333,7 @@ namespace funsens.ui
             else
                 this.taxTotalL.Font = new Font("SimSun", 14);
 
-            this.totalL.Text = "￥" + total;
+            this.totalL.Text = "￥" + Math.Round(total,2);
         }
 
         private void uiShowHP()
@@ -411,5 +411,7 @@ namespace funsens.ui
         {
             this.save();
         }
+
+       
     }
 }

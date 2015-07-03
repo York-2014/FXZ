@@ -45,15 +45,15 @@ namespace funsens.item.vo
             set { name = value; }
         }
 
-        private float price;
-        public float Price
+        private double price;
+        public double Price
         {
             get { return price; }
             set { price = value; }
         }
 
-        private float tax;
-        public float Tax
+        private double tax;
+        public double Tax
         {
             get { return tax; }
             set { tax = value; }
@@ -87,8 +87,8 @@ namespace funsens.item.vo
             set { image = value; }
         }
 
-        private float taxRate;
-        public float TaxRate
+        private double taxRate;
+        public double TaxRate
         {
             get { return taxRate; }
             set { taxRate = value; }
@@ -127,12 +127,12 @@ namespace funsens.item.vo
             this.franchiseeId = jo.getString("seller_id");
             this.franchiseeName = jo.getString("company");
             this.name = jo.getString("name");
-            this.price = jo.getFloat("price");
-            this.tax = jo.getFloat("tax_rate");
+            this.price = jo.getdouble("price");
+            this.tax = jo.getdouble("tax_rate");
             this.stock = jo.getInt("stock");
             this.storeStock = jo.getInt("store_stock");
             this.imageUrl = jo.getString("pic") + "_220X220.jpg";
-            this.taxRate = jo.getFloat("tax_rate");
+            this.taxRate = jo.getdouble("tax_rate");
             this.isShelves = jo.getInt("is_shelves");
         }
 
@@ -145,8 +145,8 @@ namespace funsens.item.vo
             this.barcode = jo.getString("barcode");
             this.name = jo.getString("productName");
             this.imageUrl = jo.getString("picUrl") + "_220X220.jpg";
-            this.price = jo.getFloat("price");
-            this.tax = jo.getFloat("tax_rate");
+            this.price = jo.getdouble("price");
+            this.tax = jo.getdouble("tax_rate");
             this.amount = jo.getInt("productVolume");
         }
     }

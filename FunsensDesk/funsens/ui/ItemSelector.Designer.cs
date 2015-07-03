@@ -31,6 +31,7 @@
             this.itemDGV = new System.Windows.Forms.DataGridView();
             this.cancelB = new System.Windows.Forms.Button();
             this.titleP = new funsens.ui.TitlePanel();
+            this.条形码 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.franchiseeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +43,7 @@
             this.itemDGV.AllowUserToAddRows = false;
             this.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.条形码,
             this.franchiseeName,
             this.name,
             this.price});
@@ -70,6 +72,12 @@
             this.titleP.Name = "titleP";
             this.titleP.Size = new System.Drawing.Size(815, 50);
             this.titleP.TabIndex = 3;
+            // 
+            // 条形码
+            // 
+            this.条形码.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.条形码.HeaderText = "条形码";
+            this.条形码.Name = "条形码";
             // 
             // franchiseeName
             // 
@@ -113,6 +121,7 @@
         private System.Windows.Forms.DataGridView itemDGV;
         private System.Windows.Forms.Button cancelB;
         private TitlePanel titleP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 条形码;
         private System.Windows.Forms.DataGridViewTextBoxColumn franchiseeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;

@@ -151,74 +151,74 @@ namespace funsens.order.vo
             set { itemCount = value; }
         }
 
-        private float itemTotal;
-        public float ItemTotal
+        private double itemTotal;
+        public double ItemTotal
         {
             get { return itemTotal; }
             set { itemTotal = value; }
         }
 
-        private float taxTotal;
-        public float TaxTotal
+        private double taxTotal;
+        public double TaxTotal
         {
             get { return taxTotal; }
             set { taxTotal = value; }
         }
 
         //历史已交税费
-        private float paiedTax;
-        public float PaiedTax
+        private double paiedTax;
+        public double PaiedTax
         {
             get { return paiedTax; }
             set { paiedTax = value; }
         }
 
         //历史未交税费
-        private float unPayTax;
-        public float UnPayTax
+        private double unPayTax;
+        public double UnPayTax
         {
             get { return unPayTax; }
             set { unPayTax = value; }
         }
 
         //所有订单（拆分后的子订单）总税费
-        private float ordersTax;
-        public float OrdersTax
+        private double ordersTax;
+        public double OrdersTax
         {
             get { return ordersTax; }
             set { ordersTax = value; }
         }
 
-        private float total;
-        public float Total
+        private double total;
+        public double Total
         {
             get { return total; }
             set { total = value; }
         }
 
-        private float payment;
-        public float Payment
+        private double payment;
+        public double Payment
         {
             get { return payment; }
             set { payment = value; }
         }
 
-        private float mailFreight;    //平邮费用
-        public float MailFreight
+        private double mailFreight;    //平邮费用
+        public double MailFreight
         {
             get { return mailFreight; }
             set { mailFreight = value; }
         }
 
-        private float emsFreight;    //EMS费用
-        public float EmsFreight
+        private double emsFreight;    //EMS费用
+        public double EmsFreight
         {
             get { return emsFreight; }
             set { emsFreight = value; }
         }
 
-        private float expressFreight;    //快递费用
-        public float ExpressFreight
+        private double expressFreight;    //快递费用
+        public double ExpressFreight
         {
             get { return expressFreight; }
             set { expressFreight = value; }
@@ -295,10 +295,10 @@ namespace funsens.order.vo
             this.buyerComment = jo.getString("buyerComment");
             this.sellerComment = jo.getString("sellerComment");
             this.expressType = jo.getString("postType");
-            this.expressFreight = jo.getFloat("postPrice");
-            this.taxTotal = jo.getFloat("tax_price");
-            this.total = jo.getFloat("priceTotal");
-            this.payment = jo.getFloat("priceTotal");
+            this.expressFreight = jo.getdouble("postPrice");
+            this.taxTotal = jo.getdouble("tax_price");
+            this.total = jo.getdouble("priceTotal");
+            this.payment = jo.getdouble("priceTotal");
             this.status = jo.getInt("orderStatus");
             this.reimburseStatus = jo.getInt("reimburseStatus");
             this.created = jo.getDateTime("createTime");
@@ -318,7 +318,7 @@ namespace funsens.order.vo
                 detailsVO.Barcode = itemJO.getString("barcode");
                 detailsVO.ItemId = itemJO.getString("productId");
                 detailsVO.ItemName = itemJO.getString("productName");
-                float itemPrice = itemJO.getFloat("price");
+                double itemPrice = itemJO.getdouble("price");
                 int itemAmount = itemJO.getInt("productVolume");
                 detailsVO.ItemPrice = itemPrice;
                 detailsVO.Amount = itemAmount;
@@ -347,12 +347,12 @@ namespace funsens.order.vo
             this.reimburseStatus = jo.getInt("reimburseStatus");
             this.buyerComment = jo.getString("buyerComment");
             this.sellerComment = jo.getString("sellerComment");
-            this.payment = jo.getFloat("paidMoney");
+            this.payment = jo.getdouble("paidMoney");
             this.expressType = jo.getString("postType");
             this.expressName = jo.getString("logisticsName");
-            this.expressFreight = jo.getFloat("postPrice");
+            this.expressFreight = jo.getdouble("postPrice");
             this.invoiceNo = jo.getString("invoiceNo");
-            this.total = jo.getFloat("priceTotal");
+            this.total = jo.getdouble("priceTotal");
             this.customerName = jo.getString("connectName");
             this.customerAddress = jo.getString("address");
             this.customerTel = jo.getString("mobilephone");
@@ -378,12 +378,12 @@ namespace funsens.order.vo
             this.id = jo.getString("id");
             this.franchiseeId = jo.getString("seller_id");
             this.franchiseeName = jo.getString("company");
-            this.itemTotal = jo.getFloat("sumprice");   //商品总金额（未包含税和运费）
-            this.taxTotal = jo.getFloat("sumtax");  //税费
+            this.itemTotal = jo.getdouble("sumprice");   //商品总金额（未包含税和运费）
+            this.taxTotal = jo.getdouble("sumtax");  //税费
 
-            this.mailFreight = jo.getFloat("mail");
-            this.emsFreight = jo.getFloat("ems");
-            this.expressFreight = jo.getFloat("express");
+            this.mailFreight = jo.getdouble("mail");
+            this.emsFreight = jo.getdouble("ems");
+            this.expressFreight = jo.getdouble("express");
 
             JA itemJA = jo.getJA("prolist");
             int count = itemJA.size();

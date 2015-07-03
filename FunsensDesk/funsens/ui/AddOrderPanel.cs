@@ -303,7 +303,7 @@ namespace funsens.ui
 
                     row.Cells[7].Value = vo.Stock;
 
-                    //row.Cells[8].Value = vo.StoreStock;
+                    row.Cells[8].Value = vo.Barcode;
                 }
             }
             else
@@ -346,7 +346,7 @@ namespace funsens.ui
             franchiseeNameCell.Value = vo.FranchiseeName;
             row.Cells.Add(franchiseeNameCell);
 
-            //shopname = vo.FranchiseeName;
+           
 
             DataGridViewTextBoxCell nameCell = new DataGridViewTextBoxCell();
             nameCell.Value = vo.Name;
@@ -361,7 +361,7 @@ namespace funsens.ui
             row.Cells.Add(taxCell);
 
             DataGridViewButtonCell subtractAmountCell = new DataGridViewButtonCell();
-            subtractAmountCell.Value = "减少";
+            subtractAmountCell.Value = "-";
             row.Cells.Add(subtractAmountCell);
 
             DataGridViewTextBoxCell amountCell = new DataGridViewTextBoxCell();
@@ -370,16 +370,16 @@ namespace funsens.ui
             row.Cells.Add(amountCell);
 
             DataGridViewButtonCell addAmountCell = new DataGridViewButtonCell();
-            addAmountCell.Value = "增加";
+            addAmountCell.Value = "+";
             row.Cells.Add(addAmountCell);
 
             DataGridViewTextBoxCell StockCell = new DataGridViewTextBoxCell();
             StockCell.Value = vo.Stock.ToString();
             row.Cells.Add(StockCell);
 
-            //DataGridViewTextBoxCell StoreStockCell = new DataGridViewTextBoxCell();
-            //StoreStockCell.Value = vo.StoreStock.ToString();
-            //row.Cells.Add(StoreStockCell);
+            DataGridViewTextBoxCell barcodeCell = new DataGridViewTextBoxCell();
+            barcodeCell.Value = vo.Barcode;
+            row.Cells.Add(barcodeCell);
 
             this.itemDGV.Rows.Add(row);
 
@@ -399,9 +399,9 @@ namespace funsens.ui
         private void uiRefreshFooter()
         {
             int itemCount = 0;
-            float itemTotal = 0.0f;
-            float taxTotal = 0.0f;
-            float total = 0.0f;
+            double itemTotal = 0.00;
+            double taxTotal = 0.00;
+            double total = 0.00;
 
             int count = this.itemList.Count;
             for (int i = 0; i < count; i++)
@@ -410,7 +410,7 @@ namespace funsens.ui
 
                 itemCount += vo.Amount;
 
-                float tmpTotal = vo.Price * vo.Amount;
+                double tmpTotal = vo.Price * vo.Amount;
                 itemTotal += tmpTotal;
 
                 taxTotal += tmpTotal * (vo.Tax / 100);

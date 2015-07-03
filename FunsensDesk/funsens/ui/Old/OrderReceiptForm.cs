@@ -24,7 +24,7 @@ namespace funsens.ui
             orderVO.ExpressFreight = 2.5f;
             orderVO.MailFreight = 0.3f;
             orderVO.Payment = 319.5f;
-            orderVO.Total = 320.0f;
+            orderVO.Total = 320.00;
             orderVO.Created = DateTime.Now;
 
             OrderDetailsVO detailsVO1 = new OrderDetailsVO();

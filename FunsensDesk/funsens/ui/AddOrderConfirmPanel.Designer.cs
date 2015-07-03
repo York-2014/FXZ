@@ -91,7 +91,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(220, 47);
+            this.label6.Location = new System.Drawing.Point(243, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 19);
             this.label6.TabIndex = 11;
@@ -101,7 +101,7 @@
             // 
             this.unPayTaxL.AutoSize = true;
             this.unPayTaxL.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.unPayTaxL.Location = new System.Drawing.Point(368, 47);
+            this.unPayTaxL.Location = new System.Drawing.Point(391, 47);
             this.unPayTaxL.Name = "unPayTaxL";
             this.unPayTaxL.Size = new System.Drawing.Size(68, 19);
             this.unPayTaxL.TabIndex = 10;
@@ -121,7 +121,7 @@
             // 
             this.totalL.AutoSize = true;
             this.totalL.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.totalL.Location = new System.Drawing.Point(746, 12);
+            this.totalL.Location = new System.Drawing.Point(645, 10);
             this.totalL.Name = "totalL";
             this.totalL.Size = new System.Drawing.Size(74, 20);
             this.totalL.TabIndex = 8;
@@ -131,17 +131,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(679, 11);
+            this.label7.Location = new System.Drawing.Point(525, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 20);
+            this.label7.Size = new System.Drawing.Size(114, 20);
             this.label7.TabIndex = 7;
-            this.label7.Text = "总计：";
+            this.label7.Text = "应付总计：";
             // 
             // taxTotalL
             // 
             this.taxTotalL.AutoSize = true;
             this.taxTotalL.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.taxTotalL.Location = new System.Drawing.Point(571, 13);
+            this.taxTotalL.Location = new System.Drawing.Point(618, 47);
             this.taxTotalL.Name = "taxTotalL";
             this.taxTotalL.Size = new System.Drawing.Size(68, 19);
             this.taxTotalL.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(461, 11);
+            this.label5.Location = new System.Drawing.Point(508, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 19);
             this.label5.TabIndex = 5;
@@ -161,7 +161,7 @@
             // 
             this.freightTotalL.AutoSize = true;
             this.freightTotalL.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.freightTotalL.Location = new System.Drawing.Point(368, 12);
+            this.freightTotalL.Location = new System.Drawing.Point(391, 12);
             this.freightTotalL.Name = "freightTotalL";
             this.freightTotalL.Size = new System.Drawing.Size(68, 19);
             this.freightTotalL.TabIndex = 4;
@@ -171,7 +171,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(296, 11);
+            this.label3.Location = new System.Drawing.Point(319, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 3;
@@ -200,7 +200,7 @@
             // payB
             // 
             this.payB.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.payB.Location = new System.Drawing.Point(820, 38);
+            this.payB.Location = new System.Drawing.Point(777, 10);
             this.payB.Name = "payB";
             this.payB.Size = new System.Drawing.Size(120, 37);
             this.payB.TabIndex = 0;
@@ -211,7 +211,7 @@
             // titleP
             // 
             this.titleP.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.titleP.Location = new System.Drawing.Point(13, 0);
+            this.titleP.Location = new System.Drawing.Point(13, -8);
             this.titleP.Name = "titleP";
             this.titleP.Size = new System.Drawing.Size(825, 50);
             this.titleP.TabIndex = 6;

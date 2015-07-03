@@ -23,9 +23,9 @@ D:\Funsens\trunk\bin\Release\Settings.xml
 D:\Funsens\trunk\bin\Release\AppLoader.exe.config
 D:\Funsens\trunk\bin\Release\AppLoader.exe
 D:\Funsens\trunk\bin\Release\AppLoader.pdb
-D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.csprojResolveAssemblyReference.cache
 D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.LoaderForm.resources
 D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.Properties.Resources.resources
 D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.csproj.GenerateResource.Cache
 D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.exe
 D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.pdb
+D:\Funsens\trunk\AppLoader\obj\Release\AppLoader.csprojResolveAssemblyReference.cache

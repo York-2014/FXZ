@@ -137,8 +137,8 @@ namespace funsens.ui
                 {
                     JA orderJA = jo.getJA("orderList");
 
-                    float historyPayedTax = jo.getFloat("historyPayedTax");
-                    float historyUnPayTax = jo.getFloat("historytax");
+                    double historyPayedTax = jo.getdouble("historyPayedTax");
+                    double historyUnPayTax = jo.getdouble("historytax");
 
                     int count = orderJA.size();
                     for (int i = 0; i < count; i++)
@@ -187,7 +187,7 @@ namespace funsens.ui
 
 
                 DataGridViewTextBoxCell totalCell = new DataGridViewTextBoxCell();
-                totalCell.Value = vo.Total;
+                totalCell.Value =Math.Round(vo.Total,2);
                 row.Cells.Add(totalCell);
 
                 DataGridViewTextBoxCell createdCell = new DataGridViewTextBoxCell();

@@ -242,9 +242,9 @@ namespace funsens.ui
             List<ItemVO> itemList = this.vo.ItemList;
             int count = itemList.Count;
             int amount = 0;
-            float total = 0.0f;
-            float totalt = 0.0f;
-            float taxx = 0.0f;
+            double total = 0.00;
+            double totalt = 0.00;
+            double taxx = 0.00;
             for (int i = 0; i < count; i++)
             {
                 ItemVO itemVO = itemList[i];

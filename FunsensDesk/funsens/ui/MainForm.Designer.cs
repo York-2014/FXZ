@@ -69,14 +69,14 @@
             this.userInfoP.Controls.Add(this.label1);
             this.userInfoP.Location = new System.Drawing.Point(207, 1);
             this.userInfoP.Name = "userInfoP";
-            this.userInfoP.Size = new System.Drawing.Size(1122, 68);
+            this.userInfoP.Size = new System.Drawing.Size(1122, 49);
             this.userInfoP.TabIndex = 5;
             // 
             // idCardReaderStatusL
             // 
             this.idCardReaderStatusL.AutoSize = true;
             this.idCardReaderStatusL.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.idCardReaderStatusL.Location = new System.Drawing.Point(97, 30);
+            this.idCardReaderStatusL.Location = new System.Drawing.Point(97, 20);
             this.idCardReaderStatusL.Name = "idCardReaderStatusL";
             this.idCardReaderStatusL.Size = new System.Drawing.Size(35, 13);
             this.idCardReaderStatusL.TabIndex = 8;
@@ -85,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 30);
+            this.label3.Location = new System.Drawing.Point(21, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 7;
@@ -94,9 +94,9 @@
             // signOutB
             // 
             this.signOutB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.signOutB.Location = new System.Drawing.Point(931, 12);
+            this.signOutB.Location = new System.Drawing.Point(934, 6);
             this.signOutB.Name = "signOutB";
-            this.signOutB.Size = new System.Drawing.Size(129, 46);
+            this.signOutB.Size = new System.Drawing.Size(129, 37);
             this.signOutB.TabIndex = 6;
             this.signOutB.Text = "退出当前用户";
             this.signOutB.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             // telL
             // 
             this.telL.AutoSize = true;
-            this.telL.Location = new System.Drawing.Point(803, 30);
+            this.telL.Location = new System.Drawing.Point(803, 20);
             this.telL.Name = "telL";
             this.telL.Size = new System.Drawing.Size(11, 12);
             this.telL.TabIndex = 5;
@@ -114,7 +114,7 @@
             // usernameL
             // 
             this.usernameL.AutoSize = true;
-            this.usernameL.Location = new System.Drawing.Point(271, 30);
+            this.usernameL.Location = new System.Drawing.Point(271, 20);
             this.usernameL.Name = "usernameL";
             this.usernameL.Size = new System.Drawing.Size(11, 12);
             this.usernameL.TabIndex = 4;
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(435, 30);
+            this.label4.Location = new System.Drawing.Point(435, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 3;
@@ -132,7 +132,7 @@
             // idNoL
             // 
             this.idNoL.AutoSize = true;
-            this.idNoL.Location = new System.Drawing.Point(511, 30);
+            this.idNoL.Location = new System.Drawing.Point(511, 20);
             this.idNoL.Name = "idNoL";
             this.idNoL.Size = new System.Drawing.Size(11, 12);
             this.idNoL.TabIndex = 2;
@@ -141,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(739, 30);
+            this.label2.Location = new System.Drawing.Point(739, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 1;
@@ -150,7 +150,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 30);
+            this.label1.Location = new System.Drawing.Point(219, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
@@ -260,7 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1465, 1054);
+            this.ClientSize = new System.Drawing.Size(1362, 742);
             this.Controls.Add(this.addOrderPayP);
             this.Controls.Add(this.addOrderConfirmP);
             this.Controls.Add(this.itemS);

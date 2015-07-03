@@ -42,13 +42,13 @@ namespace funsens.ui
         private bool isFirst;
 
         //历史已交的税费
-        private float historyPayedTax;
+        private double historyPayedTax;
 
         //历史未交的税费
-        private float historyUnPayTax;
+        private double historyUnPayTax;
 
         //所有订单（拆分后的子订单）总税费
-        private float ordersTax;
+        private double ordersTax;
 
         public AddOrderPayPanel()
         {
@@ -153,9 +153,9 @@ namespace funsens.ui
                 {
                     JA orderJA = jo.getJA("orderList");
 
-                    this.historyPayedTax = jo.getFloat("historyPayedTax");
-                    this.historyUnPayTax = jo.getFloat("historytax");
-                    this.ordersTax = 0.0f;
+                    this.historyPayedTax = jo.getdouble("historyPayedTax");
+                    this.historyUnPayTax = jo.getdouble("historytax");
+                    this.ordersTax = 0.00;
 
                     int count = orderJA.size();
                     this.orderList = new List<OrderVO>();
@@ -220,7 +220,7 @@ namespace funsens.ui
                 OrderVO vo = this.orderList[i];
 
                 DataGridViewRow row = new DataGridViewRow();
-                row.Height = 120;
+                row.Height = 100;
 
                 DataGridViewTextBoxCell idCell = new DataGridViewTextBoxCell();
                 idCell.Value =  vo.Id;
@@ -231,20 +231,20 @@ namespace funsens.ui
                 customerNameCell.Value = vo.CustomerName;
                 row.Cells.Add(customerNameCell);
 
-                float total = vo.Payment;
+                double total = vo.Payment;
                 if (vo.PaiedTax > 0)
                 {
                     total += vo.TaxTotal;
                 }
                 else
                 {
-                    float tmp = vo.UnPayTax + vo.OrdersTax;
+                    double tmp = vo.UnPayTax + vo.OrdersTax;
                     if (tmp > 50)
                         total += vo.TaxTotal;
                 }
 
                 DataGridViewTextBoxCell paymentCell = new DataGridViewTextBoxCell();
-                paymentCell.Value = total;
+                paymentCell.Value = Math.Round(total, 2);
                 row.Cells.Add(paymentCell);
 
                 DataGridViewTextBoxCell statusCell = new DataGridViewTextBoxCell();
@@ -290,6 +290,10 @@ namespace funsens.ui
                 DataGridViewButtonCell receiptCell = new DataGridViewButtonCell();
                 receiptCell.Value = "打印";
                 row.Cells.Add(receiptCell);
+
+                DataGridViewButtonCell fleshCell = new DataGridViewButtonCell();
+                fleshCell.Value = "刷新";
+                row.Cells.Add(fleshCell);
 
                
 
@@ -407,7 +411,10 @@ namespace funsens.ui
                 orderReceiptForm.setOrder(orderVO);
                 orderReceiptForm.ShowDialog();
             }
-            
+            else if (e.ColumnIndex == 6)
+            {
+                this.loadOrder();
+            }
         }
 
         private void orderDGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -419,7 +426,7 @@ namespace funsens.ui
             if (orderVO.Status != OrderVO.STATUS_UN_PAY)
             {
                 orderDGV.Rows[e.RowIndex].Cells[4] = new DataGridViewTextBoxCell();
-                orderDGV.Rows[e.RowIndex].Cells[4].Value = "不出票重新支付";
+                orderDGV.Rows[e.RowIndex].Cells[4].Value = "";
             }
         }
     }

@@ -34,11 +34,17 @@ namespace funsens.mis
         //交易类型：重打结算单
         private const string TT_PRINT_SETTLE = "41";
 
+        //交易类型：查询交易明细
+        private const string TT_PRINT_DETAIL = "42";
+
         //交易类型：查询最后一笔交易
         private const string TT_QUERY_LAST_ORDER = "43";
 
         //交易类型：查询指定交易
         private const string TT_QUERY_ORDER = "44";
+
+        //交易类型：汇总查询(笔数及金额)
+        private const string TT_PRINT_ALL = "45";
 
         //交易类型：订单支付
         private const string TT_ORDER_PAY = "71";
@@ -58,7 +64,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool logIn(string userId)
         {
-            bool result = this.handle(TT_LOG_IN, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, userId, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_LOG_IN, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, userId, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -69,7 +75,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool logOut()
         {
-            bool result = this.handle(TT_LOG_OUT, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_LOG_OUT, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -80,7 +86,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool settle()
         {
-            bool result = this.handle(TT_SETTLE, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_SETTLE, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -91,7 +97,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool queryBalances()
         {
-            bool result = this.handle(TT_QUERY_BALANCES, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_QUERY_BALANCES, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -102,7 +108,7 @@ namespace funsens.mis
         /// <param name="payment"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public bool spend(float payment, string userId)
+        public bool spend(double payment, string userId)
         {
             bool result = this.handle(TT_SPEND, payment, DateTime.Now, true, S.EMPTY, S.EMPTY, userId, S.EMPTY, S.EMPTY);
 
@@ -117,7 +123,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool cancelSpend(string traceNo)
         {
-            bool result = this.handle(TT_CANCEL_SPEND, 0.0f, DateTime.Now, true, traceNo, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_CANCEL_SPEND, 0.00, DateTime.Now, true, traceNo, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -128,7 +134,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool printPre()
         {
-            bool result = this.handle(TT_PRINT_PRE, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_PRINT_PRE, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
@@ -139,10 +145,23 @@ namespace funsens.mis
         /// <returns></returns>
         public bool printSettle()
         {
-            bool result = this.handle(TT_PRINT_SETTLE, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_PRINT_SETTLE, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
+
+        /// <summary>
+        /// 查询交易明细
+        /// </summary>
+        /// <returns></returns>
+        public bool printdetails()
+        {
+            bool result = this.handle(TT_PRINT_DETAIL, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+
+            return result;
+        }
+       
+        
 
         /// <summary>
         /// 查询最后一笔交易
@@ -150,10 +169,22 @@ namespace funsens.mis
         /// <returns></returns>
         public bool queryLastOrder()
         {
-            bool result = this.handle(TT_QUERY_LAST_ORDER, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+            bool result = this.handle(TT_QUERY_LAST_ORDER, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
 
             return result;
         }
+
+        /// <summary>
+        /// 查询汇总
+        /// </summary>
+        /// <returns></returns>
+        public bool printallOrder()
+        {
+            bool result = this.handle(TT_PRINT_ALL, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY, S.EMPTY);
+
+            return result;
+        }
+       
 
         /// <summary>
         /// 查询订单
@@ -162,7 +193,7 @@ namespace funsens.mis
         /// <returns></returns>
         public bool queryOrder(string orderId)
         {
-            bool result = this.handle(TT_QUERY_ORDER, 0.0f, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, orderId, S.EMPTY);
+            bool result = this.handle(TT_QUERY_ORDER, 0.00, DateTime.Now, false, S.EMPTY, S.EMPTY, S.EMPTY, orderId, S.EMPTY);
 
             return result;
         }
@@ -176,7 +207,7 @@ namespace funsens.mis
         /// <param name="userId">收款台操作员号</param>
         /// <param name="orderId">订单号</param>
         /// <returns></returns>
-        public bool orderPay(float payment, DateTime orderDate, string userId, string orderId)
+        public bool orderPay(double payment, DateTime orderDate, string userId, string orderId)
         {
             bool result = this.handle(TT_ORDER_PAY, payment, orderDate, false, S.EMPTY, S.EMPTY, userId, orderId, S.EMPTY);
 
@@ -195,7 +226,7 @@ namespace funsens.mis
         /// <param name="orderId">订单号</param>
         /// <param name="otherInfo">其它信息</param>
         /// <returns></returns>
-        public bool handle(string transType, float payment, DateTime orderDate, bool isNullOrderDate, string traceNo, string referenceNo, string userId, string orderId, string otherInfo)
+        public bool handle(string transType, double payment, DateTime orderDate, bool isNullOrderDate, string traceNo, string referenceNo, string userId, string orderId, string otherInfo)
         {
             //打开串口
             if (!this.openCom())
@@ -471,7 +502,7 @@ namespace funsens.mis
         /// </summary>
         /// <param name="payment">交易金额，单位元</param>
         /// <returns>返回转换后的指令内容</returns>
-        private static byte[] formatPayment(float payment)
+        private static byte[] formatPayment(double payment)
         {
             //单位转换为分
             int _payment = (int)(payment * 100);

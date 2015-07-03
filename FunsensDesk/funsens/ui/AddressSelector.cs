@@ -123,10 +123,10 @@ namespace funsens.ui
             int spacing = 5;
             int footerH = this.footerP.ClientRectangle.Height;
 
-            this.addressDGV.Location = new Point(spacing, spacing);
-            this.addressDGV.Size = new Size(w - spacing * 2, h - spacing - footerH);
+            this.addressDGV.Location = new Point(spacing, footerH + spacing);
+            this.addressDGV.Size = new Size(w - spacing * 2, h - 2*spacing - footerH);
 
-            this.footerP.Location = new Point(w - spacing - this.footerP.ClientRectangle.Width, h - this.footerP.ClientRectangle.Height);
+            this.footerP.Location = new Point(w - spacing - this.footerP.ClientRectangle.Width, spacing);//w - spacing - this.footerP.ClientRectangle.Width, h - this.footerP.ClientRectangle.Height);
         }
 
         private void AddressSelector_Load(object sender, EventArgs e)

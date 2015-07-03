@@ -31,12 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemDGV = new System.Windows.Forms.DataGridView();
-            this.prePageB = new System.Windows.Forms.Button();
-            this.nextPageB = new System.Windows.Forms.Button();
-            this.pageNoL = new System.Windows.Forms.Label();
-            this.titleP = new funsens.ui.TitlePanel();
-            this.hp = new funsens.ui.HandlePanel();
-            this.footerP = new System.Windows.Forms.Panel();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.顾客 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +39,12 @@
             this.pay = new System.Windows.Forms.DataGridViewButtonColumn();
             this.operation = new System.Windows.Forms.DataGridViewButtonColumn();
             this.print = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.prePageB = new System.Windows.Forms.Button();
+            this.nextPageB = new System.Windows.Forms.Button();
+            this.pageNoL = new System.Windows.Forms.Label();
+            this.titleP = new funsens.ui.TitlePanel();
+            this.hp = new funsens.ui.HandlePanel();
+            this.footerP = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.itemDGV)).BeginInit();
             this.footerP.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.itemDGV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.itemDGV.Location = new System.Drawing.Point(0, 78);
+            this.itemDGV.Location = new System.Drawing.Point(3, 64);
             this.itemDGV.Name = "itemDGV";
             this.itemDGV.ReadOnly = true;
             this.itemDGV.RowTemplate.Height = 23;
@@ -89,64 +89,6 @@
             this.itemDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDGV_CellContentClick);
             this.itemDGV.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.itemDGV_RowPrePaint);
             this.itemDGV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemDGV_KeyDown);
-            // 
-            // prePageB
-            // 
-            this.prePageB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.prePageB.Location = new System.Drawing.Point(29, 13);
-            this.prePageB.Name = "prePageB";
-            this.prePageB.Size = new System.Drawing.Size(85, 28);
-            this.prePageB.TabIndex = 3;
-            this.prePageB.Text = "上一页";
-            this.prePageB.UseVisualStyleBackColor = true;
-            this.prePageB.Click += new System.EventHandler(this.prePageB_Click);
-            // 
-            // nextPageB
-            // 
-            this.nextPageB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextPageB.Location = new System.Drawing.Point(188, 12);
-            this.nextPageB.Name = "nextPageB";
-            this.nextPageB.Size = new System.Drawing.Size(97, 29);
-            this.nextPageB.TabIndex = 4;
-            this.nextPageB.Text = "下一页";
-            this.nextPageB.UseVisualStyleBackColor = true;
-            this.nextPageB.Click += new System.EventHandler(this.nextPageB_Click);
-            // 
-            // pageNoL
-            // 
-            this.pageNoL.AutoSize = true;
-            this.pageNoL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pageNoL.Location = new System.Drawing.Point(145, 19);
-            this.pageNoL.Name = "pageNoL";
-            this.pageNoL.Size = new System.Drawing.Size(17, 16);
-            this.pageNoL.TabIndex = 5;
-            this.pageNoL.Text = "0";
-            // 
-            // titleP
-            // 
-            this.titleP.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.titleP.Location = new System.Drawing.Point(3, 0);
-            this.titleP.Name = "titleP";
-            this.titleP.Size = new System.Drawing.Size(669, 69);
-            this.titleP.TabIndex = 2;
-            // 
-            // hp
-            // 
-            this.hp.BackColor = System.Drawing.SystemColors.Control;
-            this.hp.Location = new System.Drawing.Point(476, 426);
-            this.hp.Name = "hp";
-            this.hp.Size = new System.Drawing.Size(186, 56);
-            this.hp.TabIndex = 1;
-            // 
-            // footerP
-            // 
-            this.footerP.Controls.Add(this.pageNoL);
-            this.footerP.Controls.Add(this.prePageB);
-            this.footerP.Controls.Add(this.nextPageB);
-            this.footerP.Location = new System.Drawing.Point(337, 3);
-            this.footerP.Name = "footerP";
-            this.footerP.Size = new System.Drawing.Size(308, 50);
-            this.footerP.TabIndex = 6;
             // 
             // id
             // 
@@ -210,6 +152,64 @@
             this.print.Name = "print";
             this.print.ReadOnly = true;
             this.print.Width = 50;
+            // 
+            // prePageB
+            // 
+            this.prePageB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.prePageB.Location = new System.Drawing.Point(29, 13);
+            this.prePageB.Name = "prePageB";
+            this.prePageB.Size = new System.Drawing.Size(85, 28);
+            this.prePageB.TabIndex = 3;
+            this.prePageB.Text = "上一页";
+            this.prePageB.UseVisualStyleBackColor = true;
+            this.prePageB.Click += new System.EventHandler(this.prePageB_Click);
+            // 
+            // nextPageB
+            // 
+            this.nextPageB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nextPageB.Location = new System.Drawing.Point(188, 12);
+            this.nextPageB.Name = "nextPageB";
+            this.nextPageB.Size = new System.Drawing.Size(97, 29);
+            this.nextPageB.TabIndex = 4;
+            this.nextPageB.Text = "下一页";
+            this.nextPageB.UseVisualStyleBackColor = true;
+            this.nextPageB.Click += new System.EventHandler(this.nextPageB_Click);
+            // 
+            // pageNoL
+            // 
+            this.pageNoL.AutoSize = true;
+            this.pageNoL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pageNoL.Location = new System.Drawing.Point(145, 19);
+            this.pageNoL.Name = "pageNoL";
+            this.pageNoL.Size = new System.Drawing.Size(17, 16);
+            this.pageNoL.TabIndex = 5;
+            this.pageNoL.Text = "0";
+            // 
+            // titleP
+            // 
+            this.titleP.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.titleP.Location = new System.Drawing.Point(3, 0);
+            this.titleP.Name = "titleP";
+            this.titleP.Size = new System.Drawing.Size(669, 58);
+            this.titleP.TabIndex = 2;
+            // 
+            // hp
+            // 
+            this.hp.BackColor = System.Drawing.SystemColors.Control;
+            this.hp.Location = new System.Drawing.Point(476, 426);
+            this.hp.Name = "hp";
+            this.hp.Size = new System.Drawing.Size(186, 56);
+            this.hp.TabIndex = 1;
+            // 
+            // footerP
+            // 
+            this.footerP.Controls.Add(this.pageNoL);
+            this.footerP.Controls.Add(this.prePageB);
+            this.footerP.Controls.Add(this.nextPageB);
+            this.footerP.Location = new System.Drawing.Point(337, 3);
+            this.footerP.Name = "footerP";
+            this.footerP.Size = new System.Drawing.Size(308, 50);
+            this.footerP.TabIndex = 6;
             // 
             // MyOrderListPanel
             // 

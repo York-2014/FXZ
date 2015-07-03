@@ -54,6 +54,7 @@ namespace funsens.ui
         public const int PT_ADDESS_SELECTOR_FINISH = 92;
 
         public const int PT_POS = 101;
+        
 
         private CVRHandler.CVRDelegate cvrDelegate;
 
@@ -127,6 +128,7 @@ namespace funsens.ui
                     _delegate = new _Delegate(this.addOrderBClick);
                     this.Invoke(_delegate);
                     break;
+                
                 case PT_ADD_ORDER_CONFIRM:
                     addOrderConfirm();
                     break;
@@ -230,6 +232,8 @@ namespace funsens.ui
 
             this.addOrderP.Visible = true;
         }
+
+      
 
         private void addOrderConfirm()
         {
